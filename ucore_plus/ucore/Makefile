@@ -4,7 +4,7 @@
 # You shouldn't need to mess with anything beyond this point...
 #--------------------------------------------------------------
 TOPDIR=$(shell pwd)
-Q :=@
+#Q :=@
 
 KTREE = $(TOPDIR)/src/kern-ucore
 ifndef O
@@ -14,20 +14,8 @@ OBJPATH_ROOT := $(abspath $(O))
 endif
 export TOPDIR KTREE OBJPATH_ROOT
 
-ifeq ("$(origin V)", "command line")
-  KBUILD_VERBOSE = $(V)
-endif
-ifndef KBUILD_VERBOSE
-  KBUILD_VERBOSE = 0
-endif
-
-ifeq ($(KBUILD_VERBOSE),1)
-  quiet =
-  Q =
-else
-  quiet=quiet_
-  Q = @
-endif
+quiet =
+Q =
 
 ifneq ($(filter 4.%,$(MAKE_VERSION)),)	# make-4
 ifneq ($(filter %s ,$(firstword x$(MAKEFLAGS))),)
