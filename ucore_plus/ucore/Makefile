@@ -14,6 +14,31 @@ OBJPATH_ROOT := $(abspath $(O))
 endif
 export TOPDIR KTREE OBJPATH_ROOT
 
+ifeq ("$(origin V)", "command line")
+  KBUILD_VERBOSE = $(V)
+endif
+ifndef KBUILD_VERBOSE
+  KBUILD_VERBOSE = 0
+endif
+
+ifeq ($(KBUILD_VERBOSE),1)
+  quiet =
+  Q =
+else
+  quiet=quiet_
+  Q = @
+endif
+
+ifneq ($(filter 4.%,$(MAKE_VERSION)),)	# make-4
+ifneq ($(filter %s ,$(firstword x$(MAKEFLAGS))),)
+  quiet=silent_
+endif
+else					# make-3.8x
+ifneq ($(filter s% -s%,$(MAKEFLAGS)),)
+  quiet=silent_
+endif
+endif
+
 CONFIG = package/config
 CONFIG_SCRIPT = $(OBJPATH_ROOT)/.config
 DEFCONFIG_SCRIPT = $(OBJPATH_ROOT)/.defconfig
