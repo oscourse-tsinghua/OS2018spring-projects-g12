@@ -2,7 +2,7 @@ this is a readme.md
 os.cs.tsinghua.edu.cn/oscourse/OS2018spring/projects/g12  
 how to run makefile  
 
-'''shell
+```shell
 apt-get install libncurses5 libncurses5-dev
 
 make O=out ARCH=arm64 defconfig  
