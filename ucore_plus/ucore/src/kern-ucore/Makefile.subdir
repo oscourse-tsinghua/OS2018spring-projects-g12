@@ -2,6 +2,7 @@ include $(KCONFIG_AUTOCONFIG)
 
 include Makefile
 
+NOW_DIR = $(shell pwd)
 DEPS := $(addprefix $(OBJPATH)/, $(obj-y:.o=.d))
 BUILTIN_O := $(OBJPATH)/builtin.o
 OBJ_Y := $(addprefix $(OBJPATH)/,$(obj-y))
@@ -23,11 +24,11 @@ $(BUILTIN_O):
 	$(Q)touch $@
 endif
 
-$(OBJPATH)/%.ko: %.c
+$(OBJPATH)/%.ko: $(NOW_DIR)/%.c
 	@echo CC $<
 	$(Q)$(TARGET_CC) $(TARGET_CFLAGS) -c -o $@ $<
 
-$(OBJPATH)/%.o: %.c
+$(OBJPATH)/%.o: $(NOW_DIR)/%.c
 	@echo CC $<
 	$(Q)$(TARGET_CC) $(TARGET_CFLAGS) -c -o $@ $<
 
@@ -35,7 +36,7 @@ $(OBJPATH)/%.o: %.S
 	@echo CC $<
 	$(Q)$(TARGET_CC) -D__ASSEMBLY__ $(TARGET_CFLAGS) -c -o $@ $<
 
-$(OBJPATH)/%.d: %.c
+$(OBJPATH)/%.d: $(NOW_DIR)/%.c
 	@echo DEP $<
 	@set -e; rm -f $@; \
 		$(TARGET_CC) -MM -MT "$(OBJPATH)/$*.o $@" $(TARGET_CFLAGS) $< > $@;
