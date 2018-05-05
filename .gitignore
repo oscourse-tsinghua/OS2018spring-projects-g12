@@ -72,6 +72,8 @@ dkms.conf
 *.new
 *.org
 
-
+#ucore_plus
+ucore_plus/ucore/out/*
+ucore_plus/ucore/makeout.txt
 
 
