@@ -1,0 +1,13 @@
+{"num_contexts":1,
+"all_contexts":[
+{"num_warnings":2,
+"context":[{"instr":"  %0 = load i8, i8* %path, align 1, !dbg !23210","lineno":132,"file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/fs\/devs\/dev.c"}
+
+],"warnings":[
+{"warn_no":1,"warn_data":{"by":"TaintedPointerDereferenceChecker says:","warn_str":"Trying to read from a user pointer.","at":"  %0 = load i8, i8* %path, align 1, !dbg !23210","at_line":132,"at_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/fs\/devs\/dev.c","at_func":"dev_lookup","inst_trace":[{"instr":"  %0 = load i8, i8* %path, align 1, !dbg !23210","instr_loc":132,"instr_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/fs\/devs\/dev.c","instr_func":"dev_lookup"}]}
+},
+{"warn_no":2,"warn_data":{"by":"TaintedPointerDereferenceChecker says:","warn_str":"Trying to write to a user pointer.","at":"  store %struct.inode* %node, %struct.inode** %node_store, align 8, !dbg !23217","at_line":136,"at_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/fs\/devs\/dev.c","at_func":"dev_lookup","inst_trace":[{"instr":"  %0 = load i8, i8* %path, align 1, !dbg !23210","instr_loc":132,"instr_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/fs\/devs\/dev.c","instr_func":"dev_lookup"}]}
+}
+]}]
+
+}

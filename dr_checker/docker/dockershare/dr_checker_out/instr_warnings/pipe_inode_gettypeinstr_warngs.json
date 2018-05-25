@@ -1,0 +1,9 @@
+{"num_instructions":1,
+"all_instrs":[
+{"num_warnings":1,
+"at":"  store i32 8192, i32* %type_store, align 4, !dbg !23208","at_line":168,"at_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/fs\/pipe\/pipe_inode.c","at_func":"pipe_inode_gettype","warnings":[
+{"warn_no":1,"warn_data":{"by":"TaintedPointerDereferenceChecker says:","warn_str":"Trying to write to a user pointer.","at":"  store i32 8192, i32* %type_store, align 4, !dbg !23208","at_line":168,"at_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/fs\/pipe\/pipe_inode.c","at_func":"pipe_inode_gettype","inst_trace":[{"instr":"  store i32 8192, i32* %type_store, align 4, !dbg !23208","instr_loc":168,"instr_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/fs\/pipe\/pipe_inode.c","instr_func":"pipe_inode_gettype"}]}
+}
+]}]
+
+}

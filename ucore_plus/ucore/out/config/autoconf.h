@@ -1,6 +1,6 @@
 /*
  * Automatically generated C config: don't edit
- * Fri May  4 05:24:48 2018
+ * Fri May 25 06:54:49 2018
  */
 #define UCONFIG_NR_NUMA_NODES 16
 #define UCONFIG_ARCH "amd64"
@@ -12,7 +12,7 @@
 #define UCONFIG_SFS_IMAGE_SIZE 256
 #define UCONFIG_HAVE_SFS 1
 #define UCONFIG_HEAP_SLAB 1
-#define UCONFIG_UNAME_RELEASE "4.13.0-39-generic"
+#define UCONFIG_UNAME_RELEASE "4.13.0-43-generic"
 #define UCONFIG_ADDITIONAL_CFLAGS ""
 #define UCONFIG_CROSS_COMPILE ""
 #define UCONFIG_HAVE_FATFS 1

@@ -1,0 +1,433 @@
+Args: /dr_checker/drcheckerdeps/llvm/build/bin/opt -analyze -debug -load /dockershare/gitrepo/helper_scripts/../llvm_analysis/MainAnalysisPasses/build_dir/SoundyAliasAnalysis/libSoundyAliasAnalysis.so -dr_checker -toCheckFunction=x2_cpu_init -functionType=NEWTYPE -skipInit=1 -outputFile=/dockershare/ucore_plus/dr_checker_out/x2_cpu_init.json -instrWarnOutput=/dockershare/ucore_plus/dr_checker_out/instr_warnings/x2_cpu_initinstr_warngs.json /tmp/tmpLXPdPc 
+
+Features:+64bit,+sse2
+CPU:generic
+
+Subtarget features: SSELevel 2, 3DNowLevel 0, 64bit 1
+KnuthDiv: m=2 n=2
+KnuthDiv: original: 0 4294967295 4294967295 2147483647 4294967260 by 2147483647 4294967295
+KnuthDiv:   normal: 1 4294967295 4294967294 4294967295 4294967224 by 4294967295 4294967294
+KnuthDiv: quotient digit #2
+KnuthDiv: dividend == 8589934591
+KnuthDiv: qp == 2, rp == 1
+KnuthDiv: u[j+i] = 2, borrow = 1
+KnuthDiv: u[j+i] = 0, borrow = 1
+KnuthDiv: after subtraction: 0 0 2 4294967295 4294967224
+KnuthDiv: after correction: 0 0 2 4294967295 4294967224
+KnuthDiv: digit result = 2
+KnuthDiv: quotient digit #1
+KnuthDiv: dividend == 2
+KnuthDiv: qp == 0, rp == 2
+KnuthDiv: u[j+i] = 4294967295, borrow = 0
+KnuthDiv: u[j+i] = 2, borrow = 0
+KnuthDiv: after subtraction: 0 0 2 4294967295 4294967224
+KnuthDiv: after correction: 0 0 2 4294967295 4294967224
+KnuthDiv: digit result = 0
+KnuthDiv: quotient digit #0
+KnuthDiv: dividend == 12884901887
+KnuthDiv: qp == 2, rp == 4294967297
+KnuthDiv: u[j+i] = 4294967228, borrow = 2
+KnuthDiv: u[j+i] = 4294967295, borrow = 2
+KnuthDiv: after subtraction: 0 0 0 4294967295 4294967228
+KnuthDiv: after correction: 0 0 0 4294967295 4294967228
+KnuthDiv: digit result = 2
+KnuthDiv: quotient: 2 0 2
+
+Provided Function Type:NEWTYPE, Function Name:x2_cpu_init
+Invalid Function Type:NEWTYPE
+Errorring out
+opt: /dr_checker/gitrepo/llvm_analysis/MainAnalysisPasses/SoundyAliasAnalysis/src/SoundyAliasAnalysis.cpp:469: void DRCHECKER::SAAPass::setupFunctionArgs(llvm::Function*, DRCHECKER::GlobalState&, std::vector<llvm::Instruction*>*): Assertion `is_handled' failed.
+#0 0x0000000002795003 llvm::sys::PrintStackTrace(llvm::raw_ostream&) (/dr_checker/drcheckerdeps/llvm/build/bin/opt+0x2795003)
+#1 0x000000000279535b PrintStackTraceSignalHandler(void*) (/dr_checker/drcheckerdeps/llvm/build/bin/opt+0x279535b)
+#2 0x00000000027937a1 llvm::sys::RunSignalHandlers() (/dr_checker/drcheckerdeps/llvm/build/bin/opt+0x27937a1)
+#3 0x000000000279494a SignalHandler(int) (/dr_checker/drcheckerdeps/llvm/build/bin/opt+0x279494a)
+#4 0x00007fcbd8b69390 __restore_rt (/lib/x86_64-linux-gnu/libpthread.so.0+0x11390)
+#5 0x00007fcbd7f22428 gsignal (/lib/x86_64-linux-gnu/libc.so.6+0x35428)
+#6 0x00007fcbd7f2402a abort (/lib/x86_64-linux-gnu/libc.so.6+0x3702a)
+#7 0x00007fcbd7f1abd7 (/lib/x86_64-linux-gnu/libc.so.6+0x2dbd7)
+#8 0x00007fcbd7f1ac82 (/lib/x86_64-linux-gnu/libc.so.6+0x2dc82)
+#9 0x00007fcbd7c01449 DRCHECKER::SAAPass::setupFunctionArgs(llvm::Function*, DRCHECKER::GlobalState&, std::vector<llvm::Instruction*, std::allocator<llvm::Instruction*> >*) /dr_checker/gitrepo/llvm_analysis/MainAnalysisPasses/SoundyAliasAnalysis/src/SoundyAliasAnalysis.cpp:472:0
+#10 0x00007fcbd7c0028e DRCHECKER::SAAPass::runOnModule(llvm::Module&) /dr_checker/gitrepo/llvm_analysis/MainAnalysisPasses/SoundyAliasAnalysis/src/SoundyAliasAnalysis.cpp:228:0
+#11 0x000000000222f160 (anonymous namespace)::MPPassManager::runOnModule(llvm::Module&) (/dr_checker/drcheckerdeps/llvm/build/bin/opt+0x222f160)
+#12 0x000000000222f891 llvm::legacy::PassManagerImpl::run(llvm::Module&) (/dr_checker/drcheckerdeps/llvm/build/bin/opt+0x222f891)
+#13 0x000000000222fa9d llvm::legacy::PassManager::run(llvm::Module&) (/dr_checker/drcheckerdeps/llvm/build/bin/opt+0x222fa9d)
+#14 0x0000000000f6b143 main (/dr_checker/drcheckerdeps/llvm/build/bin/opt+0xf6b143)
+#15 0x00007fcbd7f0d830 __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x20830)
+#16 0x0000000000f45f99 _start (/dr_checker/drcheckerdeps/llvm/build/bin/opt+0xf45f99)
+Stack dump:
+0.	Program arguments: /dr_checker/drcheckerdeps/llvm/build/bin/opt -analyze -debug -load /dockershare/gitrepo/helper_scripts/../llvm_analysis/MainAnalysisPasses/build_dir/SoundyAliasAnalysis/libSoundyAliasAnalysis.so -dr_checker -toCheckFunction=x2_cpu_init -functionType=NEWTYPE -skipInit=1 -outputFile=/dockershare/ucore_plus/dr_checker_out/x2_cpu_init.json -instrWarnOutput=/dockershare/ucore_plus/dr_checker_out/instr_warnings/x2_cpu_initinstr_warngs.json /tmp/tmpLXPdPc 
+1.	Running pass 'Soundy Driver Checker' on module '/tmp/tmpLXPdPc'.
+timeout: the monitored command dumped core
+Aborted
+Args: /dr_checker/drcheckerdeps/llvm/build/bin/opt -analyze -debug -load /dockershare/gitrepo/helper_scripts/../llvm_analysis/MainAnalysisPasses/build_dir/SoundyAliasAnalysis/libSoundyAliasAnalysis.so -dr_checker -toCheckFunction=x2_cpu_init -functionType=NEWTYPE -skipInit=1 -outputFile=/dockershare/ucore_plus/dr_checker_out/x2_cpu_init.json -instrWarnOutput=/dockershare/ucore_plus/dr_checker_out/instr_warnings/x2_cpu_initinstr_warngs.json /tmp/tmpzkHVO1 
+
+Features:+64bit,+sse2
+CPU:generic
+
+Subtarget features: SSELevel 2, 3DNowLevel 0, 64bit 1
+KnuthDiv: m=2 n=2
+KnuthDiv: original: 0 4294967295 4294967295 2147483647 4294967260 by 2147483647 4294967295
+KnuthDiv:   normal: 1 4294967295 4294967294 4294967295 4294967224 by 4294967295 4294967294
+KnuthDiv: quotient digit #2
+KnuthDiv: dividend == 8589934591
+KnuthDiv: qp == 2, rp == 1
+KnuthDiv: u[j+i] = 2, borrow = 1
+KnuthDiv: u[j+i] = 0, borrow = 1
+KnuthDiv: after subtraction: 0 0 2 4294967295 4294967224
+KnuthDiv: after correction: 0 0 2 4294967295 4294967224
+KnuthDiv: digit result = 2
+KnuthDiv: quotient digit #1
+KnuthDiv: dividend == 2
+KnuthDiv: qp == 0, rp == 2
+KnuthDiv: u[j+i] = 4294967295, borrow = 0
+KnuthDiv: u[j+i] = 2, borrow = 0
+KnuthDiv: after subtraction: 0 0 2 4294967295 4294967224
+KnuthDiv: after correction: 0 0 2 4294967295 4294967224
+KnuthDiv: digit result = 0
+KnuthDiv: quotient digit #0
+KnuthDiv: dividend == 12884901887
+KnuthDiv: qp == 2, rp == 4294967297
+KnuthDiv: u[j+i] = 4294967228, borrow = 2
+KnuthDiv: u[j+i] = 4294967295, borrow = 2
+KnuthDiv: after subtraction: 0 0 0 4294967295 4294967228
+KnuthDiv: after correction: 0 0 0 4294967295 4294967228
+KnuthDiv: digit result = 2
+KnuthDiv: quotient: 2 0 2
+
+KnuthDiv: m=2 n=2
+KnuthDiv: original: 0 4294967295 4294967295 2147483647 4294967260 by 2147483647 4294967295
+KnuthDiv:   normal: 1 4294967295 4294967294 4294967295 4294967224 by 4294967295 4294967294
+KnuthDiv: quotient digit #2
+KnuthDiv: dividend == 8589934591
+KnuthDiv: qp == 2, rp == 1
+KnuthDiv: u[j+i] = 2, borrow = 1
+KnuthDiv: u[j+i] = 0, borrow = 1
+KnuthDiv: after subtraction: 0 0 2 4294967295 4294967224
+KnuthDiv: after correction: 0 0 2 4294967295 4294967224
+KnuthDiv: digit result = 2
+KnuthDiv: quotient digit #1
+KnuthDiv: dividend == 2
+KnuthDiv: qp == 0, rp == 2
+KnuthDiv: u[j+i] = 4294967295, borrow = 0
+KnuthDiv: u[j+i] = 2, borrow = 0
+KnuthDiv: after subtraction: 0 0 2 4294967295 4294967224
+KnuthDiv: after correction: 0 0 2 4294967295 4294967224
+KnuthDiv: digit result = 0
+KnuthDiv: quotient digit #0
+KnuthDiv: dividend == 12884901887
+KnuthDiv: qp == 2, rp == 4294967297
+KnuthDiv: u[j+i] = 4294967228, borrow = 2
+KnuthDiv: u[j+i] = 4294967295, borrow = 2
+KnuthDiv: after subtraction: 0 0 0 4294967295 4294967228
+KnuthDiv: after correction: 0 0 0 4294967295 4294967228
+KnuthDiv: digit result = 2
+KnuthDiv: quotient: 2 0 2
+
+Provided Function Type:NEWTYPE, Function Name:x2_cpu_init
+Invalid Function Type:NEWTYPE
+Errorring out
+opt: /dr_checker/gitrepo/llvm_analysis/MainAnalysisPasses/SoundyAliasAnalysis/src/SoundyAliasAnalysis.cpp:469: void DRCHECKER::SAAPass::setupFunctionArgs(llvm::Function*, DRCHECKER::GlobalState&, std::vector<llvm::Instruction*>*): Assertion `is_handled' failed.
+#0 0x0000000002795003 llvm::sys::PrintStackTrace(llvm::raw_ostream&) (/dr_checker/drcheckerdeps/llvm/build/bin/opt+0x2795003)
+#1 0x000000000279535b PrintStackTraceSignalHandler(void*) (/dr_checker/drcheckerdeps/llvm/build/bin/opt+0x279535b)
+#2 0x00000000027937a1 llvm::sys::RunSignalHandlers() (/dr_checker/drcheckerdeps/llvm/build/bin/opt+0x27937a1)
+#3 0x000000000279494a SignalHandler(int) (/dr_checker/drcheckerdeps/llvm/build/bin/opt+0x279494a)
+#4 0x00007fb62df10390 __restore_rt (/lib/x86_64-linux-gnu/libpthread.so.0+0x11390)
+#5 0x00007fb62d2c9428 gsignal (/lib/x86_64-linux-gnu/libc.so.6+0x35428)
+#6 0x00007fb62d2cb02a abort (/lib/x86_64-linux-gnu/libc.so.6+0x3702a)
+#7 0x00007fb62d2c1bd7 (/lib/x86_64-linux-gnu/libc.so.6+0x2dbd7)
+#8 0x00007fb62d2c1c82 (/lib/x86_64-linux-gnu/libc.so.6+0x2dc82)
+#9 0x00007fb62cfa8449 DRCHECKER::SAAPass::setupFunctionArgs(llvm::Function*, DRCHECKER::GlobalState&, std::vector<llvm::Instruction*, std::allocator<llvm::Instruction*> >*) /dr_checker/gitrepo/llvm_analysis/MainAnalysisPasses/SoundyAliasAnalysis/src/SoundyAliasAnalysis.cpp:472:0
+#10 0x00007fb62cfa728e DRCHECKER::SAAPass::runOnModule(llvm::Module&) /dr_checker/gitrepo/llvm_analysis/MainAnalysisPasses/SoundyAliasAnalysis/src/SoundyAliasAnalysis.cpp:228:0
+#11 0x000000000222f160 (anonymous namespace)::MPPassManager::runOnModule(llvm::Module&) (/dr_checker/drcheckerdeps/llvm/build/bin/opt+0x222f160)
+#12 0x000000000222f891 llvm::legacy::PassManagerImpl::run(llvm::Module&) (/dr_checker/drcheckerdeps/llvm/build/bin/opt+0x222f891)
+#13 0x000000000222fa9d llvm::legacy::PassManager::run(llvm::Module&) (/dr_checker/drcheckerdeps/llvm/build/bin/opt+0x222fa9d)
+#14 0x0000000000f6b143 main (/dr_checker/drcheckerdeps/llvm/build/bin/opt+0xf6b143)
+#15 0x00007fb62d2b4830 __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x20830)
+#16 0x0000000000f45f99 _start (/dr_checker/drcheckerdeps/llvm/build/bin/opt+0xf45f99)
+Stack dump:
+0.	Program arguments: /dr_checker/drcheckerdeps/llvm/build/bin/opt -analyze -debug -load /dockershare/gitrepo/helper_scripts/../llvm_analysis/MainAnalysisPasses/build_dir/SoundyAliasAnalysis/libSoundyAliasAnalysis.so -dr_checker -toCheckFunction=x2_cpu_init -functionType=NEWTYPE -skipInit=1 -outputFile=/dockershare/ucore_plus/dr_checker_out/x2_cpu_init.json -instrWarnOutput=/dockershare/ucore_plus/dr_checker_out/instr_warnings/x2_cpu_initinstr_warngs.json /tmp/tmpzkHVO1 
+1.	Running pass 'Soundy Driver Checker' on module '/tmp/tmpzkHVO1'.
+timeout: the monitored command dumped core
+Aborted
+Args: /dr_checker/drcheckerdeps/llvm/build/bin/opt -analyze -debug -load /dockershare/gitrepo/helper_scripts/../llvm_analysis/MainAnalysisPasses/build_dir/SoundyAliasAnalysis/libSoundyAliasAnalysis.so -dr_checker -toCheckFunction=x2_cpu_init -functionType=NEWTYPE -skipInit=1 -outputFile=/dockershare/ucore_plus/dr_checker_out/x2_cpu_init.json -instrWarnOutput=/dockershare/ucore_plus/dr_checker_out/instr_warnings/x2_cpu_initinstr_warngs.json /tmp/tmpa0mHth 
+
+Features:+64bit,+sse2
+CPU:generic
+
+Subtarget features: SSELevel 2, 3DNowLevel 0, 64bit 1
+KnuthDiv: m=2 n=2
+KnuthDiv: original: 0 4294967295 4294967295 2147483647 4294967260 by 2147483647 4294967295
+KnuthDiv:   normal: 1 4294967295 4294967294 4294967295 4294967224 by 4294967295 4294967294
+KnuthDiv: quotient digit #2
+KnuthDiv: dividend == 8589934591
+KnuthDiv: qp == 2, rp == 1
+KnuthDiv: u[j+i] = 2, borrow = 1
+KnuthDiv: u[j+i] = 0, borrow = 1
+KnuthDiv: after subtraction: 0 0 2 4294967295 4294967224
+KnuthDiv: after correction: 0 0 2 4294967295 4294967224
+KnuthDiv: digit result = 2
+KnuthDiv: quotient digit #1
+KnuthDiv: dividend == 2
+KnuthDiv: qp == 0, rp == 2
+KnuthDiv: u[j+i] = 4294967295, borrow = 0
+KnuthDiv: u[j+i] = 2, borrow = 0
+KnuthDiv: after subtraction: 0 0 2 4294967295 4294967224
+KnuthDiv: after correction: 0 0 2 4294967295 4294967224
+KnuthDiv: digit result = 0
+KnuthDiv: quotient digit #0
+KnuthDiv: dividend == 12884901887
+KnuthDiv: qp == 2, rp == 4294967297
+KnuthDiv: u[j+i] = 4294967228, borrow = 2
+KnuthDiv: u[j+i] = 4294967295, borrow = 2
+KnuthDiv: after subtraction: 0 0 0 4294967295 4294967228
+KnuthDiv: after correction: 0 0 0 4294967295 4294967228
+KnuthDiv: digit result = 2
+KnuthDiv: quotient: 2 0 2
+
+KnuthDiv: m=2 n=2
+KnuthDiv: original: 0 4294967295 4294967295 2147483647 4294967260 by 2147483647 4294967295
+KnuthDiv:   normal: 1 4294967295 4294967294 4294967295 4294967224 by 4294967295 4294967294
+KnuthDiv: quotient digit #2
+KnuthDiv: dividend == 8589934591
+KnuthDiv: qp == 2, rp == 1
+KnuthDiv: u[j+i] = 2, borrow = 1
+KnuthDiv: u[j+i] = 0, borrow = 1
+KnuthDiv: after subtraction: 0 0 2 4294967295 4294967224
+KnuthDiv: after correction: 0 0 2 4294967295 4294967224
+KnuthDiv: digit result = 2
+KnuthDiv: quotient digit #1
+KnuthDiv: dividend == 2
+KnuthDiv: qp == 0, rp == 2
+KnuthDiv: u[j+i] = 4294967295, borrow = 0
+KnuthDiv: u[j+i] = 2, borrow = 0
+KnuthDiv: after subtraction: 0 0 2 4294967295 4294967224
+KnuthDiv: after correction: 0 0 2 4294967295 4294967224
+KnuthDiv: digit result = 0
+KnuthDiv: quotient digit #0
+KnuthDiv: dividend == 12884901887
+KnuthDiv: qp == 2, rp == 4294967297
+KnuthDiv: u[j+i] = 4294967228, borrow = 2
+KnuthDiv: u[j+i] = 4294967295, borrow = 2
+KnuthDiv: after subtraction: 0 0 0 4294967295 4294967228
+KnuthDiv: after correction: 0 0 0 4294967295 4294967228
+KnuthDiv: digit result = 2
+KnuthDiv: quotient: 2 0 2
+
+Provided Function Type:NEWTYPE, Function Name:x2_cpu_init
+Invalid Function Type:NEWTYPE
+Errorring out
+opt: /dr_checker/gitrepo/llvm_analysis/MainAnalysisPasses/SoundyAliasAnalysis/src/SoundyAliasAnalysis.cpp:469: void DRCHECKER::SAAPass::setupFunctionArgs(llvm::Function*, DRCHECKER::GlobalState&, std::vector<llvm::Instruction*>*): Assertion `is_handled' failed.
+#0 0x0000000002795003 llvm::sys::PrintStackTrace(llvm::raw_ostream&) (/dr_checker/drcheckerdeps/llvm/build/bin/opt+0x2795003)
+#1 0x000000000279535b PrintStackTraceSignalHandler(void*) (/dr_checker/drcheckerdeps/llvm/build/bin/opt+0x279535b)
+#2 0x00000000027937a1 llvm::sys::RunSignalHandlers() (/dr_checker/drcheckerdeps/llvm/build/bin/opt+0x27937a1)
+#3 0x000000000279494a SignalHandler(int) (/dr_checker/drcheckerdeps/llvm/build/bin/opt+0x279494a)
+#4 0x00007f774bdf1390 __restore_rt (/lib/x86_64-linux-gnu/libpthread.so.0+0x11390)
+#5 0x00007f774b1aa428 gsignal (/lib/x86_64-linux-gnu/libc.so.6+0x35428)
+#6 0x00007f774b1ac02a abort (/lib/x86_64-linux-gnu/libc.so.6+0x3702a)
+#7 0x00007f774b1a2bd7 (/lib/x86_64-linux-gnu/libc.so.6+0x2dbd7)
+#8 0x00007f774b1a2c82 (/lib/x86_64-linux-gnu/libc.so.6+0x2dc82)
+#9 0x00007f774ae89449 DRCHECKER::SAAPass::setupFunctionArgs(llvm::Function*, DRCHECKER::GlobalState&, std::vector<llvm::Instruction*, std::allocator<llvm::Instruction*> >*) /dr_checker/gitrepo/llvm_analysis/MainAnalysisPasses/SoundyAliasAnalysis/src/SoundyAliasAnalysis.cpp:472:0
+#10 0x00007f774ae8828e DRCHECKER::SAAPass::runOnModule(llvm::Module&) /dr_checker/gitrepo/llvm_analysis/MainAnalysisPasses/SoundyAliasAnalysis/src/SoundyAliasAnalysis.cpp:228:0
+#11 0x000000000222f160 (anonymous namespace)::MPPassManager::runOnModule(llvm::Module&) (/dr_checker/drcheckerdeps/llvm/build/bin/opt+0x222f160)
+#12 0x000000000222f891 llvm::legacy::PassManagerImpl::run(llvm::Module&) (/dr_checker/drcheckerdeps/llvm/build/bin/opt+0x222f891)
+#13 0x000000000222fa9d llvm::legacy::PassManager::run(llvm::Module&) (/dr_checker/drcheckerdeps/llvm/build/bin/opt+0x222fa9d)
+#14 0x0000000000f6b143 main (/dr_checker/drcheckerdeps/llvm/build/bin/opt+0xf6b143)
+#15 0x00007f774b195830 __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x20830)
+#16 0x0000000000f45f99 _start (/dr_checker/drcheckerdeps/llvm/build/bin/opt+0xf45f99)
+Stack dump:
+0.	Program arguments: /dr_checker/drcheckerdeps/llvm/build/bin/opt -analyze -debug -load /dockershare/gitrepo/helper_scripts/../llvm_analysis/MainAnalysisPasses/build_dir/SoundyAliasAnalysis/libSoundyAliasAnalysis.so -dr_checker -toCheckFunction=x2_cpu_init -functionType=NEWTYPE -skipInit=1 -outputFile=/dockershare/ucore_plus/dr_checker_out/x2_cpu_init.json -instrWarnOutput=/dockershare/ucore_plus/dr_checker_out/instr_warnings/x2_cpu_initinstr_warngs.json /tmp/tmpa0mHth 
+1.	Running pass 'Soundy Driver Checker' on module '/tmp/tmpa0mHth'.
+timeout: the monitored command dumped core
+Aborted
+Args: /dr_checker/drcheckerdeps/llvm/build/bin/opt -analyze -debug -load /dockershare/gitrepo/helper_scripts/../llvm_analysis/MainAnalysisPasses/build_dir/SoundyAliasAnalysis/libSoundyAliasAnalysis.so -dr_checker -toCheckFunction=x2_cpu_init -functionType=NEWTYPE -skipInit=1 -outputFile=/dockershare/ucore_plus/dr_checker_out/x2_cpu_init.json -instrWarnOutput=/dockershare/ucore_plus/dr_checker_out/instr_warnings/x2_cpu_initinstr_warngs.json /tmp/tmpitHAoA 
+
+Features:+64bit,+sse2
+CPU:generic
+
+Subtarget features: SSELevel 2, 3DNowLevel 0, 64bit 1
+KnuthDiv: m=2 n=2
+KnuthDiv: original: 0 4294967295 4294967295 2147483647 4294967260 by 2147483647 4294967295
+KnuthDiv:   normal: 1 4294967295 4294967294 4294967295 4294967224 by 4294967295 4294967294
+KnuthDiv: quotient digit #2
+KnuthDiv: dividend == 8589934591
+KnuthDiv: qp == 2, rp == 1
+KnuthDiv: u[j+i] = 2, borrow = 1
+KnuthDiv: u[j+i] = 0, borrow = 1
+KnuthDiv: after subtraction: 0 0 2 4294967295 4294967224
+KnuthDiv: after correction: 0 0 2 4294967295 4294967224
+KnuthDiv: digit result = 2
+KnuthDiv: quotient digit #1
+KnuthDiv: dividend == 2
+KnuthDiv: qp == 0, rp == 2
+KnuthDiv: u[j+i] = 4294967295, borrow = 0
+KnuthDiv: u[j+i] = 2, borrow = 0
+KnuthDiv: after subtraction: 0 0 2 4294967295 4294967224
+KnuthDiv: after correction: 0 0 2 4294967295 4294967224
+KnuthDiv: digit result = 0
+KnuthDiv: quotient digit #0
+KnuthDiv: dividend == 12884901887
+KnuthDiv: qp == 2, rp == 4294967297
+KnuthDiv: u[j+i] = 4294967228, borrow = 2
+KnuthDiv: u[j+i] = 4294967295, borrow = 2
+KnuthDiv: after subtraction: 0 0 0 4294967295 4294967228
+KnuthDiv: after correction: 0 0 0 4294967295 4294967228
+KnuthDiv: digit result = 2
+KnuthDiv: quotient: 2 0 2
+
+Provided Function Type:NEWTYPE, Function Name:x2_cpu_init
+Invalid Function Type:NEWTYPE
+Errorring out
+opt: /dr_checker/gitrepo/llvm_analysis/MainAnalysisPasses/SoundyAliasAnalysis/src/SoundyAliasAnalysis.cpp:469: void DRCHECKER::SAAPass::setupFunctionArgs(llvm::Function*, DRCHECKER::GlobalState&, std::vector<llvm::Instruction*>*): Assertion `is_handled' failed.
+#0 0x0000000002795003 llvm::sys::PrintStackTrace(llvm::raw_ostream&) (/dr_checker/drcheckerdeps/llvm/build/bin/opt+0x2795003)
+#1 0x000000000279535b PrintStackTraceSignalHandler(void*) (/dr_checker/drcheckerdeps/llvm/build/bin/opt+0x279535b)
+#2 0x00000000027937a1 llvm::sys::RunSignalHandlers() (/dr_checker/drcheckerdeps/llvm/build/bin/opt+0x27937a1)
+#3 0x000000000279494a SignalHandler(int) (/dr_checker/drcheckerdeps/llvm/build/bin/opt+0x279494a)
+#4 0x00007f56e6c5f390 __restore_rt (/lib/x86_64-linux-gnu/libpthread.so.0+0x11390)
+#5 0x00007f56e6018428 gsignal (/lib/x86_64-linux-gnu/libc.so.6+0x35428)
+#6 0x00007f56e601a02a abort (/lib/x86_64-linux-gnu/libc.so.6+0x3702a)
+#7 0x00007f56e6010bd7 (/lib/x86_64-linux-gnu/libc.so.6+0x2dbd7)
+#8 0x00007f56e6010c82 (/lib/x86_64-linux-gnu/libc.so.6+0x2dc82)
+#9 0x00007f56e5cf7449 DRCHECKER::SAAPass::setupFunctionArgs(llvm::Function*, DRCHECKER::GlobalState&, std::vector<llvm::Instruction*, std::allocator<llvm::Instruction*> >*) /dr_checker/gitrepo/llvm_analysis/MainAnalysisPasses/SoundyAliasAnalysis/src/SoundyAliasAnalysis.cpp:472:0
+#10 0x00007f56e5cf628e DRCHECKER::SAAPass::runOnModule(llvm::Module&) /dr_checker/gitrepo/llvm_analysis/MainAnalysisPasses/SoundyAliasAnalysis/src/SoundyAliasAnalysis.cpp:228:0
+#11 0x000000000222f160 (anonymous namespace)::MPPassManager::runOnModule(llvm::Module&) (/dr_checker/drcheckerdeps/llvm/build/bin/opt+0x222f160)
+#12 0x000000000222f891 llvm::legacy::PassManagerImpl::run(llvm::Module&) (/dr_checker/drcheckerdeps/llvm/build/bin/opt+0x222f891)
+#13 0x000000000222fa9d llvm::legacy::PassManager::run(llvm::Module&) (/dr_checker/drcheckerdeps/llvm/build/bin/opt+0x222fa9d)
+#14 0x0000000000f6b143 main (/dr_checker/drcheckerdeps/llvm/build/bin/opt+0xf6b143)
+#15 0x00007f56e6003830 __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x20830)
+#16 0x0000000000f45f99 _start (/dr_checker/drcheckerdeps/llvm/build/bin/opt+0xf45f99)
+Stack dump:
+0.	Program arguments: /dr_checker/drcheckerdeps/llvm/build/bin/opt -analyze -debug -load /dockershare/gitrepo/helper_scripts/../llvm_analysis/MainAnalysisPasses/build_dir/SoundyAliasAnalysis/libSoundyAliasAnalysis.so -dr_checker -toCheckFunction=x2_cpu_init -functionType=NEWTYPE -skipInit=1 -outputFile=/dockershare/ucore_plus/dr_checker_out/x2_cpu_init.json -instrWarnOutput=/dockershare/ucore_plus/dr_checker_out/instr_warnings/x2_cpu_initinstr_warngs.json /tmp/tmpitHAoA 
+1.	Running pass 'Soundy Driver Checker' on module '/tmp/tmpitHAoA'.
+timeout: the monitored command dumped core
+Aborted
+Args: /dr_checker/drcheckerdeps/llvm/build/bin/opt -analyze -debug -load /dockershare/gitrepo/helper_scripts/../llvm_analysis/MainAnalysisPasses/build_dir/SoundyAliasAnalysis/libSoundyAliasAnalysis.so -dr_checker -toCheckFunction=x2_cpu_init -functionType=NEWTYPE -skipInit=1 -outputFile=/dockershare/ucore_plus/dr_checker_out/x2_cpu_init.json -instrWarnOutput=/dockershare/ucore_plus/dr_checker_out/instr_warnings/x2_cpu_initinstr_warngs.json /tmp/tmpAjV39o 
+
+Features:+64bit,+sse2
+CPU:generic
+
+Subtarget features: SSELevel 2, 3DNowLevel 0, 64bit 1
+KnuthDiv: m=2 n=2
+KnuthDiv: original: 0 4294967295 4294967295 2147483647 4294967260 by 2147483647 4294967295
+KnuthDiv:   normal: 1 4294967295 4294967294 4294967295 4294967224 by 4294967295 4294967294
+KnuthDiv: quotient digit #2
+KnuthDiv: dividend == 8589934591
+KnuthDiv: qp == 2, rp == 1
+KnuthDiv: u[j+i] = 2, borrow = 1
+KnuthDiv: u[j+i] = 0, borrow = 1
+KnuthDiv: after subtraction: 0 0 2 4294967295 4294967224
+KnuthDiv: after correction: 0 0 2 4294967295 4294967224
+KnuthDiv: digit result = 2
+KnuthDiv: quotient digit #1
+KnuthDiv: dividend == 2
+KnuthDiv: qp == 0, rp == 2
+KnuthDiv: u[j+i] = 4294967295, borrow = 0
+KnuthDiv: u[j+i] = 2, borrow = 0
+KnuthDiv: after subtraction: 0 0 2 4294967295 4294967224
+KnuthDiv: after correction: 0 0 2 4294967295 4294967224
+KnuthDiv: digit result = 0
+KnuthDiv: quotient digit #0
+KnuthDiv: dividend == 12884901887
+KnuthDiv: qp == 2, rp == 4294967297
+KnuthDiv: u[j+i] = 4294967228, borrow = 2
+KnuthDiv: u[j+i] = 4294967295, borrow = 2
+KnuthDiv: after subtraction: 0 0 0 4294967295 4294967228
+KnuthDiv: after correction: 0 0 0 4294967295 4294967228
+KnuthDiv: digit result = 2
+KnuthDiv: quotient: 2 0 2
+
+Provided Function Type:NEWTYPE, Function Name:x2_cpu_init
+????????????????????
+Starting Analyzing function:x2_cpu_init
+[+] Writing output to:/dockershare/ucore_plus/dr_checker_out/x2_cpu_init.json
+[+] Return message from file write:Success
+[+] Writing Instr output to:/dockershare/ucore_plus/dr_checker_out/instr_warnings/x2_cpu_initinstr_warngs.json
+[+] Return message from file write:Success
+Printing analysis 'Soundy Driver Checker':
+Pass::print not implemented for pass: 'Soundy Driver Checker'!
+Args: /dr_checker/drcheckerdeps/llvm/build/bin/opt -analyze -debug -load /dockershare/gitrepo/helper_scripts/../llvm_analysis/MainAnalysisPasses/build_dir/SoundyAliasAnalysis/libSoundyAliasAnalysis.so -dr_checker -toCheckFunction=x2_cpu_init -functionType=NEWTYPE -skipInit=1 -outputFile=/dockershare/ucore_plus/dr_checker_out/x2_cpu_init.json -instrWarnOutput=/dockershare/ucore_plus/dr_checker_out/instr_warnings/x2_cpu_initinstr_warngs.json /tmp/tmpuYt6Ga 
+
+Features:+64bit,+sse2
+CPU:generic
+
+Subtarget features: SSELevel 2, 3DNowLevel 0, 64bit 1
+KnuthDiv: m=2 n=2
+KnuthDiv: original: 0 4294967295 4294967295 2147483647 4294967260 by 2147483647 4294967295
+KnuthDiv:   normal: 1 4294967295 4294967294 4294967295 4294967224 by 4294967295 4294967294
+KnuthDiv: quotient digit #2
+KnuthDiv: dividend == 8589934591
+KnuthDiv: qp == 2, rp == 1
+KnuthDiv: u[j+i] = 2, borrow = 1
+KnuthDiv: u[j+i] = 0, borrow = 1
+KnuthDiv: after subtraction: 0 0 2 4294967295 4294967224
+KnuthDiv: after correction: 0 0 2 4294967295 4294967224
+KnuthDiv: digit result = 2
+KnuthDiv: quotient digit #1
+KnuthDiv: dividend == 2
+KnuthDiv: qp == 0, rp == 2
+KnuthDiv: u[j+i] = 4294967295, borrow = 0
+KnuthDiv: u[j+i] = 2, borrow = 0
+KnuthDiv: after subtraction: 0 0 2 4294967295 4294967224
+KnuthDiv: after correction: 0 0 2 4294967295 4294967224
+KnuthDiv: digit result = 0
+KnuthDiv: quotient digit #0
+KnuthDiv: dividend == 12884901887
+KnuthDiv: qp == 2, rp == 4294967297
+KnuthDiv: u[j+i] = 4294967228, borrow = 2
+KnuthDiv: u[j+i] = 4294967295, borrow = 2
+KnuthDiv: after subtraction: 0 0 0 4294967295 4294967228
+KnuthDiv: after correction: 0 0 0 4294967295 4294967228
+KnuthDiv: digit result = 2
+KnuthDiv: quotient: 2 0 2
+
+Provided Function Type:NEWTYPE, Function Name:x2_cpu_init
+????????????????????
+Starting Analyzing function:x2_cpu_init
+[+] Writing output to:/dockershare/ucore_plus/dr_checker_out/x2_cpu_init.json
+[+] Return message from file write:Success
+[+] Writing Instr output to:/dockershare/ucore_plus/dr_checker_out/instr_warnings/x2_cpu_initinstr_warngs.json
+[+] Return message from file write:Success
+Printing analysis 'Soundy Driver Checker':
+Pass::print not implemented for pass: 'Soundy Driver Checker'!
+Args: /dr_checker/drcheckerdeps/llvm/build/bin/opt -analyze -debug -load /dockershare/gitrepo/helper_scripts/../llvm_analysis/MainAnalysisPasses/build_dir/SoundyAliasAnalysis/libSoundyAliasAnalysis.so -dr_checker -toCheckFunction=x2_cpu_init -functionType=NEWTYPE -skipInit=1 -outputFile=/dockershare/ucore_plus/dr_checker_out/x2_cpu_init.json -instrWarnOutput=/dockershare/ucore_plus/dr_checker_out/instr_warnings/x2_cpu_initinstr_warngs.json /tmp/tmpN1UqPI 
+
+Features:+64bit,+sse2
+CPU:generic
+
+Subtarget features: SSELevel 2, 3DNowLevel 0, 64bit 1
+KnuthDiv: m=2 n=2
+KnuthDiv: original: 0 4294967295 4294967295 2147483647 4294967260 by 2147483647 4294967295
+KnuthDiv:   normal: 1 4294967295 4294967294 4294967295 4294967224 by 4294967295 4294967294
+KnuthDiv: quotient digit #2
+KnuthDiv: dividend == 8589934591
+KnuthDiv: qp == 2, rp == 1
+KnuthDiv: u[j+i] = 2, borrow = 1
+KnuthDiv: u[j+i] = 0, borrow = 1
+KnuthDiv: after subtraction: 0 0 2 4294967295 4294967224
+KnuthDiv: after correction: 0 0 2 4294967295 4294967224
+KnuthDiv: digit result = 2
+KnuthDiv: quotient digit #1
+KnuthDiv: dividend == 2
+KnuthDiv: qp == 0, rp == 2
+KnuthDiv: u[j+i] = 4294967295, borrow = 0
+KnuthDiv: u[j+i] = 2, borrow = 0
+KnuthDiv: after subtraction: 0 0 2 4294967295 4294967224
+KnuthDiv: after correction: 0 0 2 4294967295 4294967224
+KnuthDiv: digit result = 0
+KnuthDiv: quotient digit #0
+KnuthDiv: dividend == 12884901887
+KnuthDiv: qp == 2, rp == 4294967297
+KnuthDiv: u[j+i] = 4294967228, borrow = 2
+KnuthDiv: u[j+i] = 4294967295, borrow = 2
+KnuthDiv: after subtraction: 0 0 0 4294967295 4294967228
+KnuthDiv: after correction: 0 0 0 4294967295 4294967228
+KnuthDiv: digit result = 2
+KnuthDiv: quotient: 2 0 2
+
+Provided Function Type:NEWTYPE, Function Name:x2_cpu_init
+Starting Analyzing function:x2_cpu_init
+[+] Writing output to:/dockershare/ucore_plus/dr_checker_out/x2_cpu_init.json
+[+] Return message from file write:Success
+[+] Writing Instr output to:/dockershare/ucore_plus/dr_checker_out/instr_warnings/x2_cpu_initinstr_warngs.json
+[+] Return message from file write:Success
+Printing analysis 'Soundy Driver Checker':
+Pass::print not implemented for pass: 'Soundy Driver Checker'!

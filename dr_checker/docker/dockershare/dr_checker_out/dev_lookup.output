@@ -1,0 +1,29 @@
+Args: /dr_checker/drcheckerdeps/llvm/build/bin/opt -analyze -debug -load /dockershare/gitrepo/helper_scripts/../llvm_analysis/MainAnalysisPasses/build_dir/SoundyAliasAnalysis/libSoundyAliasAnalysis.so -dr_checker -toCheckFunction=dev_lookup -functionType=NEWTYPE -skipInit=1 -outputFile=/dockershare/ucore_plus/dr_checker_out/dev_lookup.json -instrWarnOutput=/dockershare/ucore_plus/dr_checker_out/instr_warnings/dev_lookupinstr_warngs.json /tmp/tmpnLwCgD 
+
+Features:+64bit,+sse2
+CPU:generic
+
+Subtarget features: SSELevel 2, 3DNowLevel 0, 64bit 1
+Provided Function Type:NEWTYPE, Function Name:dev_lookup
+????????????????????
+Starting Analyzing function:dev_lookup
+[+] Writing output to:/dockershare/ucore_plus/dr_checker_out/dev_lookup.json
+[+] Return message from file write:Success
+[+] Writing Instr output to:/dockershare/ucore_plus/dr_checker_out/instr_warnings/dev_lookupinstr_warngs.json
+[+] Return message from file write:Success
+Printing analysis 'Soundy Driver Checker':
+Pass::print not implemented for pass: 'Soundy Driver Checker'!
+Args: /dr_checker/drcheckerdeps/llvm/build/bin/opt -analyze -debug -load /dockershare/gitrepo/helper_scripts/../llvm_analysis/MainAnalysisPasses/build_dir/SoundyAliasAnalysis/libSoundyAliasAnalysis.so -dr_checker -toCheckFunction=dev_lookup -functionType=NEWTYPE -skipInit=1 -outputFile=/dockershare/ucore_plus/dr_checker_out/dev_lookup.json -instrWarnOutput=/dockershare/ucore_plus/dr_checker_out/instr_warnings/dev_lookupinstr_warngs.json /tmp/tmpTbhYz7 
+
+Features:+64bit,+sse2
+CPU:generic
+
+Subtarget features: SSELevel 2, 3DNowLevel 0, 64bit 1
+Provided Function Type:NEWTYPE, Function Name:dev_lookup
+Starting Analyzing function:dev_lookup
+[+] Writing output to:/dockershare/ucore_plus/dr_checker_out/dev_lookup.json
+[+] Return message from file write:Success
+[+] Writing Instr output to:/dockershare/ucore_plus/dr_checker_out/instr_warnings/dev_lookupinstr_warngs.json
+[+] Return message from file write:Success
+Printing analysis 'Soundy Driver Checker':
+Pass::print not implemented for pass: 'Soundy Driver Checker'!

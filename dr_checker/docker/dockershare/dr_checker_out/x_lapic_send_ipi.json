@@ -1,0 +1,40 @@
+{"num_contexts":4,
+"all_contexts":[
+{"num_warnings":1,
+"context":[{"instr":"  br label %do.body, !dbg !76786","lineno":281,"file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/arch\/amd64\/driver\/xapic.c"}
+,{"instr":"  call void @xapicw(i32 196, i32 %shl) #7, !dbg !76794","lineno":282,"file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/arch\/amd64\/driver\/xapic.c"}
+
+],"warnings":[
+{"warn_no":1,"warn_data":{"by":"GlobalVariableRaceDetector says:","warn_str":"Trying to use a global variable without locking.","at":"  %0 = load i32*, i32** @xapic, align 8, !dbg !76784","at_line":69,"at_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/arch\/amd64\/driver\/xapic.c","at_func":"xapicw","inst_trace":[{"instr":"  br label %do.body, !dbg !76786","instr_loc":281,"instr_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/arch\/amd64\/driver\/xapic.c","instr_func":"x_lapic_send_ipi"},{"instr":"  call void @xapicw(i32 196, i32 %shl) #7, !dbg !76794","instr_loc":282,"instr_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/arch\/amd64\/driver\/xapic.c","instr_func":"x_lapic_send_ipi"}]}
+}
+]},
+{"num_warnings":1,
+"context":[{"instr":"  br label %do.body, !dbg !76786","lineno":281,"file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/arch\/amd64\/driver\/xapic.c"}
+
+],"warnings":[
+{"warn_no":1,"warn_data":{"by":"TaintedPointerDereferenceChecker says:","warn_str":"Trying to read from a user pointer.","at":"  %0 = load i32, i32* %hwid, align 4, !dbg !76792","at_line":282,"at_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/arch\/amd64\/driver\/xapic.c","at_func":"x_lapic_send_ipi","inst_trace":[{"instr":"  br label %do.body, !dbg !76786","instr_loc":281,"instr_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/arch\/amd64\/driver\/xapic.c","instr_func":"x_lapic_send_ipi"},{"instr":"  %hwid = getelementptr inbounds %struct.cpu, %struct.cpu* %c, i32 0, i32 1, !dbg !76792","instr_loc":282,"instr_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/arch\/amd64\/driver\/xapic.c","instr_func":"x_lapic_send_ipi"}]}
+}
+]},
+{"num_warnings":1,
+"context":[{"instr":"  br label %do.body, !dbg !76786","lineno":281,"file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/arch\/amd64\/driver\/xapic.c"}
+,{"instr":"  %call1 = call i32 @xapicwait() #7, !dbg !76797","lineno":284,"file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/arch\/amd64\/driver\/xapic.c"}
+,{"instr":"  %call = call i32 @xapicr(i32 192) #7, !dbg !76783","lineno":90,"file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/arch\/amd64\/driver\/xapic.c"}
+
+],"warnings":[
+{"warn_no":1,"warn_data":{"by":"GlobalVariableRaceDetector says:","warn_str":"Trying to use a global variable without locking.","at":"  %0 = load i32*, i32** @xapic, align 8, !dbg !76782","at_line":76,"at_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/arch\/amd64\/driver\/xapic.c","at_func":"xapicr","inst_trace":[{"instr":"  br label %do.body, !dbg !76786","instr_loc":281,"instr_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/arch\/amd64\/driver\/xapic.c","instr_func":"x_lapic_send_ipi"},{"instr":"  %call1 = call i32 @xapicwait() #7, !dbg !76797","instr_loc":284,"instr_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/arch\/amd64\/driver\/xapic.c","instr_func":"x_lapic_send_ipi"},{"instr":"  %call = call i32 @xapicr(i32 192) #7, !dbg !76783","instr_loc":90,"instr_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/arch\/amd64\/driver\/xapic.c","instr_func":"xapicwait"}]}
+}
+]},
+{"num_warnings":1,
+"context":[{"instr":"  br label %do.body, !dbg !76786","lineno":281,"file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/arch\/amd64\/driver\/xapic.c"}
+,{"instr":"  %call1 = call i32 @xapicwait() #7, !dbg !76797","lineno":284,"file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/arch\/amd64\/driver\/xapic.c"}
+,{"instr":"  %call2 = call i32 (i8*, ...) @kprintf(i8* getelementptr inbounds ([20 x i8], [20 x i8]* @.str.7.1947, i32 0, i32 0)) #7, !dbg !76794","lineno":94,"file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/arch\/amd64\/driver\/xapic.c"}
+,{"instr":"  %call = call i32 @vkprintf(i8* %fmt, %struct.__va_list_tag* %arraydecay2) #7, !dbg !76790","lineno":55,"file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/arch\/amd64\/libs\/kio.c"}
+,{"instr":"  call void @spinlock_release(%union.acpi_name_union* @kprintf_lock) #7, !dbg !76804","lineno":39,"file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/arch\/amd64\/libs\/kio.c"}
+,{"instr":"  call void (i8*, i32, i8*, ...) @__panic(i8* getelementptr inbounds ([72 x i8], [72 x i8]* @.str.672, i32 0, i32 0), i32 30, i8* getelementptr inbounds ([21 x i8], [21 x i8]* @.str.1.673, i32 0, i32 0), i8* getelementptr inbounds ([16 x i8], [16 x i8]* @.str.2.674, i32 0, i32 0)) #7, !dbg !76787","lineno":30,"file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/arch\/amd64\/libs\/spinlock.h"}
+
+],"warnings":[
+{"warn_no":1,"warn_data":{"by":"GlobalVariableRaceDetector says:","warn_str":"Trying to use a global variable without locking.","at":"  %0 = load i32, i32* @is_panic, align 4, !dbg !76786","at_line":15,"at_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/arch\/amd64\/debug\/panic.c","at_func":"__panic","inst_trace":[{"instr":"  br label %do.body, !dbg !76786","instr_loc":281,"instr_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/arch\/amd64\/driver\/xapic.c","instr_func":"x_lapic_send_ipi"},{"instr":"  %call1 = call i32 @xapicwait() #7, !dbg !76797","instr_loc":284,"instr_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/arch\/amd64\/driver\/xapic.c","instr_func":"x_lapic_send_ipi"},{"instr":"  %call2 = call i32 (i8*, ...) @kprintf(i8* getelementptr inbounds ([20 x i8], [20 x i8]* @.str.7.1947, i32 0, i32 0)) #7, !dbg !76794","instr_loc":94,"instr_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/arch\/amd64\/driver\/xapic.c","instr_func":"xapicwait"},{"instr":"  %call = call i32 @vkprintf(i8* %fmt, %struct.__va_list_tag* %arraydecay2) #7, !dbg !76790","instr_loc":55,"instr_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/arch\/amd64\/libs\/kio.c","instr_func":"kprintf"},{"instr":"  call void @spinlock_release(%union.acpi_name_union* @kprintf_lock) #7, !dbg !76804","instr_loc":39,"instr_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/arch\/amd64\/libs\/kio.c","instr_func":"vkprintf"},{"instr":"  call void (i8*, i32, i8*, ...) @__panic(i8* getelementptr inbounds ([72 x i8], [72 x i8]* @.str.672, i32 0, i32 0), i32 30, i8* getelementptr inbounds ([21 x i8], [21 x i8]* @.str.1.673, i32 0, i32 0), i8* getelementptr inbounds ([16 x i8], [16 x i8]* @.str.2.674, i32 0, i32 0)) #7, !dbg !76787","instr_loc":30,"instr_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/arch\/amd64\/libs\/spinlock.h","instr_func":"spinlock_release"}]}
+}
+]}]
+
+}

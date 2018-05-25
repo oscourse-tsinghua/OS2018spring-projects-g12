@@ -1,0 +1,237 @@
+Args: /dr_checker/drcheckerdeps/llvm/build/bin/opt -analyze -debug -load /dockershare/gitrepo/helper_scripts/../llvm_analysis/MainAnalysisPasses/build_dir/SoundyAliasAnalysis/libSoundyAliasAnalysis.so -dr_checker -toCheckFunction=buddy_alloc_pages_numa -functionType=NEWTYPE -skipInit=1 -outputFile=/dockershare/ucore_plus/dr_checker_out/buddy_alloc_pages_numa.json -instrWarnOutput=/dockershare/ucore_plus/dr_checker_out/instr_warnings/buddy_alloc_pages_numainstr_warngs.json /tmp/tmpGHekMg 
+
+Features:+64bit,+sse2
+CPU:generic
+
+Subtarget features: SSELevel 2, 3DNowLevel 0, 64bit 1
+Provided Function Type:NEWTYPE, Function Name:buddy_alloc_pages_numa
+????????????????????
+Starting Analyzing function:buddy_alloc_pages_numa
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.value
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.value
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.value
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.declare
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.va_start
+MAX CALL SITE DEPTH REACHED, IGNORING:vkprintf
+MAX CALL SITE DEPTH REACHED, IGNORING:kprintf
+MAX CALL SITE DEPTH REACHED, IGNORING:intr_disable
+MAX CALL SITE DEPTH REACHED, IGNORING:monitor
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.value
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.declare
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.va_start
+MAX CALL SITE DEPTH REACHED, IGNORING:vkprintf
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.value
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.value
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.declare
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.va_start
+MAX CALL SITE DEPTH REACHED, IGNORING:vkprintf
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.value
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.value
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.value
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.value
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.declare
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.va_start
+MAX CALL SITE DEPTH REACHED, IGNORING:kprintf
+MAX CALL SITE DEPTH REACHED, IGNORING:vkprintf
+MAX CALL SITE DEPTH REACHED, IGNORING:intr_disable
+MAX CALL SITE DEPTH REACHED, IGNORING:monitor
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.value
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.value
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.declare
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.value
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.value
+MAX CALL SITE DEPTH REACHED, IGNORING:spinlock_acquire.5
+MAX CALL SITE DEPTH REACHED, IGNORING:vprintfmt
+MAX CALL SITE DEPTH REACHED, IGNORING:spinlock_release.7
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.value
+MAX CALL SITE DEPTH REACHED, IGNORING:nop_pause.6
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.value
+MAX CALL SITE DEPTH REACHED, IGNORING:__panic
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.value
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.value
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.declare
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.value
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.value
+MAX CALL SITE DEPTH REACHED, IGNORING:spinlock_acquire.5
+MAX CALL SITE DEPTH REACHED, IGNORING:vprintfmt
+MAX CALL SITE DEPTH REACHED, IGNORING:spinlock_release.7
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.value
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.value
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.declare
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.value
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.value
+MAX CALL SITE DEPTH REACHED, IGNORING:spinlock_acquire.5
+MAX CALL SITE DEPTH REACHED, IGNORING:vprintfmt
+MAX CALL SITE DEPTH REACHED, IGNORING:spinlock_release.7
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.value
+MAX CALL SITE DEPTH REACHED, IGNORING:nop_pause.6
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.value
+MAX CALL SITE DEPTH REACHED, IGNORING:__panic
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.value
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.value
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.declare
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.value
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.value
+MAX CALL SITE DEPTH REACHED, IGNORING:spinlock_acquire.5
+MAX CALL SITE DEPTH REACHED, IGNORING:vprintfmt
+MAX CALL SITE DEPTH REACHED, IGNORING:spinlock_release.7
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.value
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.declare
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.va_start
+MAX CALL SITE DEPTH REACHED, IGNORING:vkprintf
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.value
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.value
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.value
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.declare
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.value
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.value
+MAX CALL SITE DEPTH REACHED, IGNORING:spinlock_acquire.5
+MAX CALL SITE DEPTH REACHED, IGNORING:vprintfmt
+MAX CALL SITE DEPTH REACHED, IGNORING:spinlock_release.7
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.value
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.declare
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.va_start
+MAX CALL SITE DEPTH REACHED, IGNORING:vkprintf
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.value
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.value
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.declare
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.va_start
+MAX CALL SITE DEPTH REACHED, IGNORING:vkprintf
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.value
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.value
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.value
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.declare
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.value
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.value
+MAX CALL SITE DEPTH REACHED, IGNORING:spinlock_acquire.5
+MAX CALL SITE DEPTH REACHED, IGNORING:vprintfmt
+MAX CALL SITE DEPTH REACHED, IGNORING:spinlock_release.7
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.value
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.declare
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.va_start
+MAX CALL SITE DEPTH REACHED, IGNORING:vkprintf
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.value
+[+] Writing output to:/dockershare/ucore_plus/dr_checker_out/buddy_alloc_pages_numa.json
+[+] Return message from file write:Success
+[+] Writing Instr output to:/dockershare/ucore_plus/dr_checker_out/instr_warnings/buddy_alloc_pages_numainstr_warngs.json
+[+] Return message from file write:Success
+Printing analysis 'Soundy Driver Checker':
+Pass::print not implemented for pass: 'Soundy Driver Checker'!
+Args: /dr_checker/drcheckerdeps/llvm/build/bin/opt -analyze -debug -load /dockershare/gitrepo/helper_scripts/../llvm_analysis/MainAnalysisPasses/build_dir/SoundyAliasAnalysis/libSoundyAliasAnalysis.so -dr_checker -toCheckFunction=buddy_alloc_pages_numa -functionType=NEWTYPE -skipInit=1 -outputFile=/dockershare/ucore_plus/dr_checker_out/buddy_alloc_pages_numa.json -instrWarnOutput=/dockershare/ucore_plus/dr_checker_out/instr_warnings/buddy_alloc_pages_numainstr_warngs.json /tmp/tmpsAyjC5 
+
+Features:+64bit,+sse2
+CPU:generic
+
+Subtarget features: SSELevel 2, 3DNowLevel 0, 64bit 1
+Provided Function Type:NEWTYPE, Function Name:buddy_alloc_pages_numa
+Starting Analyzing function:buddy_alloc_pages_numa
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.value
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.value
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.value
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.declare
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.va_start
+MAX CALL SITE DEPTH REACHED, IGNORING:vkprintf
+MAX CALL SITE DEPTH REACHED, IGNORING:kprintf
+MAX CALL SITE DEPTH REACHED, IGNORING:intr_disable
+MAX CALL SITE DEPTH REACHED, IGNORING:monitor
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.value
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.declare
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.va_start
+MAX CALL SITE DEPTH REACHED, IGNORING:vkprintf
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.value
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.value
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.declare
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.va_start
+MAX CALL SITE DEPTH REACHED, IGNORING:vkprintf
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.value
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.value
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.value
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.value
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.declare
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.va_start
+MAX CALL SITE DEPTH REACHED, IGNORING:kprintf
+MAX CALL SITE DEPTH REACHED, IGNORING:vkprintf
+MAX CALL SITE DEPTH REACHED, IGNORING:intr_disable
+MAX CALL SITE DEPTH REACHED, IGNORING:monitor
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.value
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.value
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.declare
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.value
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.value
+MAX CALL SITE DEPTH REACHED, IGNORING:spinlock_acquire.5
+MAX CALL SITE DEPTH REACHED, IGNORING:vprintfmt
+MAX CALL SITE DEPTH REACHED, IGNORING:spinlock_release.7
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.value
+MAX CALL SITE DEPTH REACHED, IGNORING:nop_pause.6
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.value
+MAX CALL SITE DEPTH REACHED, IGNORING:__panic
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.value
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.value
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.declare
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.value
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.value
+MAX CALL SITE DEPTH REACHED, IGNORING:spinlock_acquire.5
+MAX CALL SITE DEPTH REACHED, IGNORING:vprintfmt
+MAX CALL SITE DEPTH REACHED, IGNORING:spinlock_release.7
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.value
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.value
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.declare
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.value
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.value
+MAX CALL SITE DEPTH REACHED, IGNORING:spinlock_acquire.5
+MAX CALL SITE DEPTH REACHED, IGNORING:vprintfmt
+MAX CALL SITE DEPTH REACHED, IGNORING:spinlock_release.7
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.value
+MAX CALL SITE DEPTH REACHED, IGNORING:nop_pause.6
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.value
+MAX CALL SITE DEPTH REACHED, IGNORING:__panic
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.value
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.value
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.declare
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.value
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.value
+MAX CALL SITE DEPTH REACHED, IGNORING:spinlock_acquire.5
+MAX CALL SITE DEPTH REACHED, IGNORING:vprintfmt
+MAX CALL SITE DEPTH REACHED, IGNORING:spinlock_release.7
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.value
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.declare
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.va_start
+MAX CALL SITE DEPTH REACHED, IGNORING:vkprintf
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.value
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.value
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.value
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.declare
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.value
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.value
+MAX CALL SITE DEPTH REACHED, IGNORING:spinlock_acquire.5
+MAX CALL SITE DEPTH REACHED, IGNORING:vprintfmt
+MAX CALL SITE DEPTH REACHED, IGNORING:spinlock_release.7
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.value
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.declare
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.va_start
+MAX CALL SITE DEPTH REACHED, IGNORING:vkprintf
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.value
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.value
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.declare
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.va_start
+MAX CALL SITE DEPTH REACHED, IGNORING:vkprintf
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.value
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.value
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.value
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.declare
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.value
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.value
+MAX CALL SITE DEPTH REACHED, IGNORING:spinlock_acquire.5
+MAX CALL SITE DEPTH REACHED, IGNORING:vprintfmt
+MAX CALL SITE DEPTH REACHED, IGNORING:spinlock_release.7
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.value
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.declare
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.va_start
+MAX CALL SITE DEPTH REACHED, IGNORING:vkprintf
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.value
+[+] Writing output to:/dockershare/ucore_plus/dr_checker_out/buddy_alloc_pages_numa.json
+[+] Return message from file write:Success
+[+] Writing Instr output to:/dockershare/ucore_plus/dr_checker_out/instr_warnings/buddy_alloc_pages_numainstr_warngs.json
+[+] Return message from file write:Success
+Printing analysis 'Soundy Driver Checker':
+Pass::print not implemented for pass: 'Soundy Driver Checker'!

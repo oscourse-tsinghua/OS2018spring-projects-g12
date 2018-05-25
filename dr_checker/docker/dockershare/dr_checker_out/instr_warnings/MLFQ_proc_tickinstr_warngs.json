@@ -1,0 +1,14 @@
+{"num_instructions":2,
+"all_instrs":[
+{"num_warnings":1,
+"at":"  %0 = load %struct.sched_class*, %struct.sched_class** @sched_class.83, align 8, !dbg !2430","at_line":55,"at_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/schedule\/sched_MLFQ.c","at_func":"MLFQ_proc_tick","warnings":[
+{"warn_no":1,"warn_data":{"by":"GlobalVariableRaceDetector says:","warn_str":"Trying to use a global variable without locking.","at":"  %0 = load %struct.sched_class*, %struct.sched_class** @sched_class.83, align 8, !dbg !2430","at_line":55,"at_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/schedule\/sched_MLFQ.c","at_func":"MLFQ_proc_tick","inst_trace":[{"instr":"  %0 = load %struct.sched_class*, %struct.sched_class** @sched_class.83, align 8, !dbg !2430","instr_loc":55,"instr_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/schedule\/sched_MLFQ.c","instr_func":"MLFQ_proc_tick"}]}
+}
+]},
+{"num_warnings":1,
+"at":"  %2 = load %struct.run_queue*, %struct.run_queue** %rq1, align 8, !dbg !2432","at_line":55,"at_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/schedule\/sched_MLFQ.c","at_func":"MLFQ_proc_tick","warnings":[
+{"warn_no":1,"warn_data":{"by":"TaintedPointerDereferenceChecker says:","warn_str":"Trying to read from a user pointer.","at":"  %2 = load %struct.run_queue*, %struct.run_queue** %rq1, align 8, !dbg !2432","at_line":55,"at_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/schedule\/sched_MLFQ.c","at_func":"MLFQ_proc_tick","inst_trace":[{"instr":"  %0 = load %struct.sched_class*, %struct.sched_class** @sched_class.83, align 8, !dbg !2430","instr_loc":55,"instr_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/schedule\/sched_MLFQ.c","instr_func":"MLFQ_proc_tick"},{"instr":"  %rq1 = getelementptr inbounds %struct.proc_struct, %struct.proc_struct* %proc, i32 0, i32 23, !dbg !2432","instr_loc":55,"instr_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/schedule\/sched_MLFQ.c","instr_func":"MLFQ_proc_tick"}]}
+}
+]}]
+
+}

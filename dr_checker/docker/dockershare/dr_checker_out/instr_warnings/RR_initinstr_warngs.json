@@ -1,0 +1,19 @@
+{"num_instructions":3,
+"all_instrs":[
+{"num_warnings":1,
+"at":"  store %struct.list_entry* %run_list, %struct.list_entry** %next.i, align 8, !dbg !2433","at_line":7,"at_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/schedule\/sched_RR.c","at_func":"RR_init","warnings":[
+{"warn_no":1,"warn_data":{"by":"TaintedPointerDereferenceChecker says:","warn_str":"Trying to write to a user pointer.","at":"  store %struct.list_entry* %run_list, %struct.list_entry** %next.i, align 8, !dbg !2433","at_line":7,"at_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/schedule\/sched_RR.c","at_func":"RR_init","inst_trace":[{"instr":"  %run_list = getelementptr inbounds %struct.run_queue, %struct.run_queue* %rq, i32 0, i32 0, !dbg !2428","instr_loc":9,"instr_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/schedule\/sched_RR.c","instr_func":"RR_init"},{"instr":"  %next.i = getelementptr inbounds %struct.list_entry, %struct.list_entry* %run_list, i32 0, i32 1, !dbg !2432","instr_loc":7,"instr_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/schedule\/sched_RR.c","instr_func":"RR_init"}]}
+}
+]},
+{"num_warnings":1,
+"at":"  store %struct.list_entry* %run_list, %struct.list_entry** %prev.i, align 8, !dbg !2435","at_line":7,"at_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/schedule\/sched_RR.c","at_func":"RR_init","warnings":[
+{"warn_no":1,"warn_data":{"by":"TaintedPointerDereferenceChecker says:","warn_str":"Trying to write to a user pointer.","at":"  store %struct.list_entry* %run_list, %struct.list_entry** %prev.i, align 8, !dbg !2435","at_line":7,"at_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/schedule\/sched_RR.c","at_func":"RR_init","inst_trace":[{"instr":"  %run_list = getelementptr inbounds %struct.run_queue, %struct.run_queue* %rq, i32 0, i32 0, !dbg !2428","instr_loc":9,"instr_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/schedule\/sched_RR.c","instr_func":"RR_init"},{"instr":"  %prev.i = getelementptr inbounds %struct.list_entry, %struct.list_entry* %run_list, i32 0, i32 0, !dbg !2434","instr_loc":7,"instr_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/schedule\/sched_RR.c","instr_func":"RR_init"}]}
+}
+]},
+{"num_warnings":1,
+"at":"  store i32 0, i32* %proc_num, align 8, !dbg !2437","at_line":10,"at_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/schedule\/sched_RR.c","at_func":"RR_init","warnings":[
+{"warn_no":1,"warn_data":{"by":"TaintedPointerDereferenceChecker says:","warn_str":"Trying to write to a user pointer.","at":"  store i32 0, i32* %proc_num, align 8, !dbg !2437","at_line":10,"at_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/schedule\/sched_RR.c","at_func":"RR_init","inst_trace":[{"instr":"  %run_list = getelementptr inbounds %struct.run_queue, %struct.run_queue* %rq, i32 0, i32 0, !dbg !2428","instr_loc":9,"instr_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/schedule\/sched_RR.c","instr_func":"RR_init"},{"instr":"  %proc_num = getelementptr inbounds %struct.run_queue, %struct.run_queue* %rq, i32 0, i32 1, !dbg !2436","instr_loc":10,"instr_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/schedule\/sched_RR.c","instr_func":"RR_init"}]}
+}
+]}]
+
+}

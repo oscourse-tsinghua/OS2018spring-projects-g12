@@ -1,0 +1,29 @@
+Args: /dr_checker/drcheckerdeps/llvm/build/bin/opt -analyze -debug -load /dockershare/gitrepo/helper_scripts/../llvm_analysis/MainAnalysisPasses/build_dir/SoundyAliasAnalysis/libSoundyAliasAnalysis.so -dr_checker -toCheckFunction=yaffs_vop_opendir -functionType=NEWTYPE -skipInit=1 -outputFile=/dockershare/ucore_plus/dr_checker_out/yaffs_vop_opendir.json -instrWarnOutput=/dockershare/ucore_plus/dr_checker_out/instr_warnings/yaffs_vop_opendirinstr_warngs.json /tmp/tmpnYNNuj 
+
+Features:+64bit,+sse2
+CPU:generic
+
+Subtarget features: SSELevel 2, 3DNowLevel 0, 64bit 1
+Provided Function Type:NEWTYPE, Function Name:yaffs_vop_opendir
+????????????????????
+Starting Analyzing function:yaffs_vop_opendir
+[+] Writing output to:/dockershare/ucore_plus/dr_checker_out/yaffs_vop_opendir.json
+[+] Return message from file write:Success
+[+] Writing Instr output to:/dockershare/ucore_plus/dr_checker_out/instr_warnings/yaffs_vop_opendirinstr_warngs.json
+[+] Return message from file write:Success
+Printing analysis 'Soundy Driver Checker':
+Pass::print not implemented for pass: 'Soundy Driver Checker'!
+Args: /dr_checker/drcheckerdeps/llvm/build/bin/opt -analyze -debug -load /dockershare/gitrepo/helper_scripts/../llvm_analysis/MainAnalysisPasses/build_dir/SoundyAliasAnalysis/libSoundyAliasAnalysis.so -dr_checker -toCheckFunction=yaffs_vop_opendir -functionType=NEWTYPE -skipInit=1 -outputFile=/dockershare/ucore_plus/dr_checker_out/yaffs_vop_opendir.json -instrWarnOutput=/dockershare/ucore_plus/dr_checker_out/instr_warnings/yaffs_vop_opendirinstr_warngs.json /tmp/tmpyc_3TN 
+
+Features:+64bit,+sse2
+CPU:generic
+
+Subtarget features: SSELevel 2, 3DNowLevel 0, 64bit 1
+Provided Function Type:NEWTYPE, Function Name:yaffs_vop_opendir
+Starting Analyzing function:yaffs_vop_opendir
+[+] Writing output to:/dockershare/ucore_plus/dr_checker_out/yaffs_vop_opendir.json
+[+] Return message from file write:Success
+[+] Writing Instr output to:/dockershare/ucore_plus/dr_checker_out/instr_warnings/yaffs_vop_opendirinstr_warngs.json
+[+] Return message from file write:Success
+Printing analysis 'Soundy Driver Checker':
+Pass::print not implemented for pass: 'Soundy Driver Checker'!

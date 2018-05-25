@@ -1,0 +1,11 @@
+{"num_contexts":1,
+"all_contexts":[
+{"num_warnings":1,
+"context":[{"instr":"  br label %for.cond, !dbg !1259","lineno":43,"file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/arch\/amd64\/mm\/buddy_pmm.c"}
+
+],"warnings":[
+{"warn_no":1,"warn_data":{"by":"GlobalVariableRaceDetector says:","warn_str":"Trying to use a global variable without locking.","at":"  %arrayidx11 = getelementptr inbounds [16 x %struct.atomic_t], [16 x %struct.atomic_t]* @fa_lock, i64 0, i64 %idxprom10, !dbg !1290","at_line":48,"at_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/arch\/amd64\/mm\/buddy_pmm.c","at_func":"buddy_init","inst_trace":[{"instr":"  br label %for.cond, !dbg !1259","instr_loc":43,"instr_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/arch\/amd64\/mm\/buddy_pmm.c","instr_func":"buddy_init"}]}
+}
+]}]
+
+}

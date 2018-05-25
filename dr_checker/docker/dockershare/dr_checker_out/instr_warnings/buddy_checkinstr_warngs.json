@@ -1,0 +1,34 @@
+{"num_instructions":6,
+"all_instrs":[
+{"num_warnings":1,
+"at":"  %0 = load i32, i32* @buddy_numa_borrow, align 4, !dbg !1259","at_line":309,"at_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/arch\/amd64\/mm\/buddy_pmm.c","at_func":"buddy_check","warnings":[
+{"warn_no":1,"warn_data":{"by":"GlobalVariableRaceDetector says:","warn_str":"Trying to use a global variable without locking.","at":"  %0 = load i32, i32* @buddy_numa_borrow, align 4, !dbg !1259","at_line":309,"at_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/arch\/amd64\/mm\/buddy_pmm.c","at_func":"buddy_check","inst_trace":[{"instr":"  %free_lists_store = alloca [11 x %struct.list_entry], align 16","instr_loc":-1,"instr_func":"buddy_check"}]}
+}
+]},
+{"num_warnings":1,
+"at":"  %arrayidx = getelementptr inbounds [16 x %struct.numa_mem_zone], [16 x %struct.numa_mem_zone]* @numa_mem_zones, i64 0, i64 %idxprom, !dbg !1260","at_line":192,"at_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/arch\/amd64\/mm\/buddy_pmm.c","at_func":"page2idx","warnings":[
+{"warn_no":1,"warn_data":{"by":"GlobalVariableRaceDetector says:","warn_str":"Trying to use a global variable without locking.","at":"  %arrayidx = getelementptr inbounds [16 x %struct.numa_mem_zone], [16 x %struct.numa_mem_zone]* @numa_mem_zones, i64 0, i64 %idxprom, !dbg !1260","at_line":192,"at_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/arch\/amd64\/mm\/buddy_pmm.c","at_func":"page2idx","inst_trace":[{"instr":"  %free_lists_store = alloca [11 x %struct.list_entry], align 16","instr_loc":-1,"instr_func":"buddy_check"},{"instr":"  %call23 = call i64 @page2idx(%struct.Page* %call14) #8, !dbg !1353","instr_loc":326,"instr_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/arch\/amd64\/mm\/buddy_pmm.c","instr_func":"buddy_check"}]}
+}
+]},
+{"num_warnings":1,
+"at":"  %arrayidx = getelementptr inbounds [16 x %struct.atomic_t], [16 x %struct.atomic_t]* @fa_lock, i64 0, i64 %idxprom, !dbg !1264","at_line":277,"at_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/arch\/amd64\/mm\/buddy_pmm.c","at_func":"__buddy_nr_free_pages","warnings":[
+{"warn_no":1,"warn_data":{"by":"GlobalVariableRaceDetector says:","warn_str":"Trying to use a global variable without locking.","at":"  %arrayidx = getelementptr inbounds [16 x %struct.atomic_t], [16 x %struct.atomic_t]* @fa_lock, i64 0, i64 %idxprom, !dbg !1264","at_line":277,"at_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/arch\/amd64\/mm\/buddy_pmm.c","at_func":"__buddy_nr_free_pages","inst_trace":[{"instr":"  %free_lists_store = alloca [11 x %struct.list_entry], align 16","instr_loc":-1,"instr_func":"buddy_check"},{"instr":"  %call8 = call i64 @__buddy_nr_free_pages(i32 0) #8, !dbg !1326","instr_loc":321,"instr_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/arch\/amd64\/mm\/buddy_pmm.c","instr_func":"buddy_check"}]}
+}
+]},
+{"num_warnings":1,
+"at":"  %0 = load i32, i32* @is_panic, align 4, !dbg !1263","at_line":15,"at_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/arch\/amd64\/debug\/panic.c","at_func":"__panic","warnings":[
+{"warn_no":1,"warn_data":{"by":"GlobalVariableRaceDetector says:","warn_str":"Trying to use a global variable without locking.","at":"  %0 = load i32, i32* @is_panic, align 4, !dbg !1263","at_line":15,"at_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/arch\/amd64\/debug\/panic.c","at_func":"__panic","inst_trace":[{"instr":"  %free_lists_store = alloca [11 x %struct.list_entry], align 16","instr_loc":-1,"instr_func":"buddy_check"},{"instr":"  %call8 = call i64 @__buddy_nr_free_pages(i32 0) #8, !dbg !1326","instr_loc":321,"instr_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/arch\/amd64\/mm\/buddy_pmm.c","instr_func":"buddy_check"},{"instr":"  call void @spinlock_release(%struct.atomic_t* %arrayidx6) #7, !dbg !1287","instr_loc":281,"instr_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/arch\/amd64\/mm\/buddy_pmm.c","instr_func":"__buddy_nr_free_pages"},{"instr":"  call void (i8*, i32, i8*, ...) @__panic(i8* getelementptr inbounds ([72 x i8], [72 x i8]* @.str.10, i32 0, i32 0), i32 30, i8* getelementptr inbounds ([21 x i8], [21 x i8]* @.str.2, i32 0, i32 0), i8* getelementptr inbounds ([16 x i8], [16 x i8]* @.str.11, i32 0, i32 0)) #7, !dbg !1264","instr_loc":30,"instr_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/arch\/amd64\/libs\/spinlock.h","instr_func":"spinlock_release"}]}
+}
+]},
+{"num_warnings":1,
+"at":"  %0 = load %struct.pmm_manager*, %struct.pmm_manager** @pmm_manager, align 8, !dbg !1265","at_line":366,"at_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/arch\/amd64\/mm\/pmm.c","at_func":"alloc_pages","warnings":[
+{"warn_no":1,"warn_data":{"by":"GlobalVariableRaceDetector says:","warn_str":"Trying to use a global variable without locking.","at":"  %0 = load %struct.pmm_manager*, %struct.pmm_manager** @pmm_manager, align 8, !dbg !1265","at_line":366,"at_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/arch\/amd64\/mm\/pmm.c","at_func":"alloc_pages","inst_trace":[{"instr":"  %free_lists_store = alloca [11 x %struct.list_entry], align 16","instr_loc":-1,"instr_func":"buddy_check"},{"instr":"  %call14 = call %struct.Page* @alloc_pages(i64 8) #8, !dbg !1335","instr_loc":323,"instr_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/arch\/amd64\/mm\/buddy_pmm.c","instr_func":"buddy_check"}]}
+}
+]},
+{"num_warnings":1,
+"at":"  %0 = load %struct.pmm_manager*, %struct.pmm_manager** @pmm_manager, align 8, !dbg !1267","at_line":436,"at_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/arch\/amd64\/mm\/pmm.c","at_func":"free_pages","warnings":[
+{"warn_no":1,"warn_data":{"by":"GlobalVariableRaceDetector says:","warn_str":"Trying to use a global variable without locking.","at":"  %0 = load %struct.pmm_manager*, %struct.pmm_manager** @pmm_manager, align 8, !dbg !1267","at_line":436,"at_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/arch\/amd64\/mm\/pmm.c","at_func":"free_pages","inst_trace":[{"instr":"  %free_lists_store = alloca [11 x %struct.list_entry], align 16","instr_loc":-1,"instr_func":"buddy_check"},{"instr":"  call void @free_pages(%struct.Page* %call14, i64 8) #8, !dbg !1447","instr_loc":342,"instr_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/arch\/amd64\/mm\/buddy_pmm.c","instr_func":"buddy_check"}]}
+}
+]}]
+
+}

@@ -1,0 +1,15 @@
+{"num_contexts":1,
+"all_contexts":[
+{"num_warnings":3,
+"context":[{"instr":"  %rq_link = getelementptr inbounds %struct.run_queue, %struct.run_queue* %rq, i32 0, i32 3, !dbg !2428","lineno":43,"file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/schedule\/sched_MLFQ.c"}
+
+],"warnings":[
+{"warn_no":1,"warn_data":{"by":"TaintedLoopBoundDetector says:","warn_str":"Loop is bounded by a tainted value.","at":"  br i1 %cmp2, label %do.body, label %do.end, !dbg !2452","at_line":49,"at_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/schedule\/sched_MLFQ.c","at_func":"MLFQ_pick_next","inst_trace":[{"instr":"  %rq_link = getelementptr inbounds %struct.run_queue, %struct.run_queue* %rq, i32 0, i32 3, !dbg !2428","instr_loc":43,"instr_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/schedule\/sched_MLFQ.c","instr_func":"MLFQ_pick_next"},{"instr":"  %cmp2 = icmp ne %struct.list_entry* %4, %rq_link, !dbg !2450","instr_loc":49,"instr_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/schedule\/sched_MLFQ.c","instr_func":"MLFQ_pick_next"}]}
+},
+{"warn_no":2,"warn_data":{"by":"GlobalVariableRaceDetector says:","warn_str":"Trying to use a global variable without locking.","at":"  %0 = load %struct.sched_class*, %struct.sched_class** @sched_class.83, align 8, !dbg !2434","at_line":45,"at_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/schedule\/sched_MLFQ.c","at_func":"MLFQ_pick_next","inst_trace":[{"instr":"  %rq_link = getelementptr inbounds %struct.run_queue, %struct.run_queue* %rq, i32 0, i32 3, !dbg !2428","instr_loc":43,"instr_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/schedule\/sched_MLFQ.c","instr_func":"MLFQ_pick_next"}]}
+},
+{"warn_no":3,"warn_data":{"by":"TaintedPointerDereferenceChecker says:","warn_str":"Trying to read from a user pointer.","at":"  %4 = load %struct.list_entry*, %struct.list_entry** %next.i, align 8, !dbg !2448","at_line":45,"at_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/schedule\/sched_MLFQ.c","at_func":"MLFQ_pick_next","inst_trace":[{"instr":"  %rq_link = getelementptr inbounds %struct.run_queue, %struct.run_queue* %rq, i32 0, i32 3, !dbg !2428","instr_loc":43,"instr_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/schedule\/sched_MLFQ.c","instr_func":"MLFQ_pick_next"},{"instr":"  %le.0 = phi %struct.list_entry* [ %rq_link, %entry ], [ %4, %do.cond ]","instr_loc":49,"instr_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/schedule\/sched_MLFQ.c","instr_func":"MLFQ_pick_next"},{"instr":"  %next.i = getelementptr inbounds %struct.list_entry, %struct.list_entry* %le.0, i32 0, i32 1, !dbg !2448","instr_loc":45,"instr_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/schedule\/sched_MLFQ.c","instr_func":"MLFQ_pick_next"}]}
+}
+]}]
+
+}

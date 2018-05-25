@@ -1,0 +1,85 @@
+Args: /dr_checker/drcheckerdeps/llvm/build/bin/opt -analyze -debug -load /dockershare/gitrepo/helper_scripts/../llvm_analysis/MainAnalysisPasses/build_dir/SoundyAliasAnalysis/libSoundyAliasAnalysis.so -dr_checker -toCheckFunction=MLFQ_dequeue -functionType=NEWTYPE -skipInit=1 -outputFile=/dockershare/ucore_plus/dr_checker_out/MLFQ_dequeue.json -instrWarnOutput=/dockershare/ucore_plus/dr_checker_out/instr_warnings/MLFQ_dequeueinstr_warngs.json /tmp/tmpbL5bj9 
+
+Features:+64bit,+sse2
+CPU:generic
+
+Subtarget features: SSELevel 2, 3DNowLevel 0, 64bit 1
+Provided Function Type:NEWTYPE, Function Name:MLFQ_dequeue
+????????????????????
+Starting Analyzing function:MLFQ_dequeue
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.value
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.value
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.value
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.declare
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.va_start
+MAX CALL SITE DEPTH REACHED, IGNORING:vkprintf
+MAX CALL SITE DEPTH REACHED, IGNORING:kprintf
+MAX CALL SITE DEPTH REACHED, IGNORING:intr_disable
+MAX CALL SITE DEPTH REACHED, IGNORING:monitor
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.value
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.declare
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.va_start
+MAX CALL SITE DEPTH REACHED, IGNORING:vkprintf
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.value
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.value
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.declare
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.va_start
+MAX CALL SITE DEPTH REACHED, IGNORING:vkprintf
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.value
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.value
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.value
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.value
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.declare
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.va_start
+MAX CALL SITE DEPTH REACHED, IGNORING:kprintf
+MAX CALL SITE DEPTH REACHED, IGNORING:vkprintf
+MAX CALL SITE DEPTH REACHED, IGNORING:intr_disable
+MAX CALL SITE DEPTH REACHED, IGNORING:monitor
+[+] Writing output to:/dockershare/ucore_plus/dr_checker_out/MLFQ_dequeue.json
+[+] Return message from file write:Success
+[+] Writing Instr output to:/dockershare/ucore_plus/dr_checker_out/instr_warnings/MLFQ_dequeueinstr_warngs.json
+[+] Return message from file write:Success
+Printing analysis 'Soundy Driver Checker':
+Pass::print not implemented for pass: 'Soundy Driver Checker'!
+Args: /dr_checker/drcheckerdeps/llvm/build/bin/opt -analyze -debug -load /dockershare/gitrepo/helper_scripts/../llvm_analysis/MainAnalysisPasses/build_dir/SoundyAliasAnalysis/libSoundyAliasAnalysis.so -dr_checker -toCheckFunction=MLFQ_dequeue -functionType=NEWTYPE -skipInit=1 -outputFile=/dockershare/ucore_plus/dr_checker_out/MLFQ_dequeue.json -instrWarnOutput=/dockershare/ucore_plus/dr_checker_out/instr_warnings/MLFQ_dequeueinstr_warngs.json /tmp/tmpOqhDI9 
+
+Features:+64bit,+sse2
+CPU:generic
+
+Subtarget features: SSELevel 2, 3DNowLevel 0, 64bit 1
+Provided Function Type:NEWTYPE, Function Name:MLFQ_dequeue
+Starting Analyzing function:MLFQ_dequeue
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.value
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.value
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.value
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.declare
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.va_start
+MAX CALL SITE DEPTH REACHED, IGNORING:vkprintf
+MAX CALL SITE DEPTH REACHED, IGNORING:kprintf
+MAX CALL SITE DEPTH REACHED, IGNORING:intr_disable
+MAX CALL SITE DEPTH REACHED, IGNORING:monitor
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.value
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.declare
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.va_start
+MAX CALL SITE DEPTH REACHED, IGNORING:vkprintf
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.value
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.value
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.declare
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.va_start
+MAX CALL SITE DEPTH REACHED, IGNORING:vkprintf
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.value
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.value
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.value
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.value
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.declare
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.va_start
+MAX CALL SITE DEPTH REACHED, IGNORING:kprintf
+MAX CALL SITE DEPTH REACHED, IGNORING:vkprintf
+MAX CALL SITE DEPTH REACHED, IGNORING:intr_disable
+MAX CALL SITE DEPTH REACHED, IGNORING:monitor
+[+] Writing output to:/dockershare/ucore_plus/dr_checker_out/MLFQ_dequeue.json
+[+] Return message from file write:Success
+[+] Writing Instr output to:/dockershare/ucore_plus/dr_checker_out/instr_warnings/MLFQ_dequeueinstr_warngs.json
+[+] Return message from file write:Success
+Printing analysis 'Soundy Driver Checker':
+Pass::print not implemented for pass: 'Soundy Driver Checker'!

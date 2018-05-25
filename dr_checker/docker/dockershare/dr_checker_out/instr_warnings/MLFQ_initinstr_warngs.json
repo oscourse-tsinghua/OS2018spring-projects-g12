@@ -1,0 +1,19 @@
+{"num_instructions":3,
+"all_instrs":[
+{"num_warnings":1,
+"at":"  store %struct.sched_class* @RR_sched_class, %struct.sched_class** @sched_class.83, align 8, !dbg !2428","at_line":13,"at_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/schedule\/sched_MLFQ.c","at_func":"MLFQ_init","warnings":[
+{"warn_no":1,"warn_data":{"by":"GlobalVariableRaceDetector says:","warn_str":"Trying to use a global variable without locking.","at":"  store %struct.sched_class* @RR_sched_class, %struct.sched_class** @sched_class.83, align 8, !dbg !2428","at_line":13,"at_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/schedule\/sched_MLFQ.c","at_func":"MLFQ_init","inst_trace":[{"instr":"  store %struct.sched_class* @RR_sched_class, %struct.sched_class** @sched_class.83, align 8, !dbg !2428","instr_loc":13,"instr_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/schedule\/sched_MLFQ.c","instr_func":"MLFQ_init"}]}
+}
+]},
+{"num_warnings":1,
+"at":"  %4 = load %struct.list_entry*, %struct.list_entry** %next.i, align 8, !dbg !2442","at_line":16,"at_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/schedule\/sched_MLFQ.c","at_func":"MLFQ_init","warnings":[
+{"warn_no":1,"warn_data":{"by":"TaintedPointerDereferenceChecker says:","warn_str":"Trying to read from a user pointer.","at":"  %4 = load %struct.list_entry*, %struct.list_entry** %next.i, align 8, !dbg !2442","at_line":16,"at_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/schedule\/sched_MLFQ.c","at_func":"MLFQ_init","inst_trace":[{"instr":"  store %struct.sched_class* @RR_sched_class, %struct.sched_class** @sched_class.83, align 8, !dbg !2428","instr_loc":13,"instr_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/schedule\/sched_MLFQ.c","instr_func":"MLFQ_init"},{"instr":"  %rq_link = getelementptr inbounds %struct.run_queue, %struct.run_queue* %rq, i32 0, i32 3, !dbg !2429","instr_loc":14,"instr_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/schedule\/sched_MLFQ.c","instr_func":"MLFQ_init"},{"instr":"  %le.0 = phi %struct.list_entry* [ %rq_link, %entry ], [ %4, %do.cond ]","instr_loc":18,"instr_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/schedule\/sched_MLFQ.c","instr_func":"MLFQ_init"},{"instr":"  %next.i = getelementptr inbounds %struct.list_entry, %struct.list_entry* %le.0, i32 0, i32 1, !dbg !2442","instr_loc":16,"instr_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/schedule\/sched_MLFQ.c","instr_func":"MLFQ_init"}]}
+}
+]},
+{"num_warnings":1,
+"at":"  br i1 %cmp, label %do.body, label %do.end, !dbg !2446","at_line":18,"at_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/schedule\/sched_MLFQ.c","at_func":"MLFQ_init","warnings":[
+{"warn_no":1,"warn_data":{"by":"TaintedLoopBoundDetector says:","warn_str":"Loop is bounded by a tainted value.","at":"  br i1 %cmp, label %do.body, label %do.end, !dbg !2446","at_line":18,"at_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/schedule\/sched_MLFQ.c","at_func":"MLFQ_init","inst_trace":[{"instr":"  store %struct.sched_class* @RR_sched_class, %struct.sched_class** @sched_class.83, align 8, !dbg !2428","instr_loc":13,"instr_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/schedule\/sched_MLFQ.c","instr_func":"MLFQ_init"},{"instr":"  %rq_link = getelementptr inbounds %struct.run_queue, %struct.run_queue* %rq, i32 0, i32 3, !dbg !2429","instr_loc":14,"instr_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/schedule\/sched_MLFQ.c","instr_func":"MLFQ_init"},{"instr":"  %cmp = icmp ne %struct.list_entry* %4, %rq_link, !dbg !2444","instr_loc":18,"instr_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/schedule\/sched_MLFQ.c","instr_func":"MLFQ_init"}]}
+}
+]}]
+
+}

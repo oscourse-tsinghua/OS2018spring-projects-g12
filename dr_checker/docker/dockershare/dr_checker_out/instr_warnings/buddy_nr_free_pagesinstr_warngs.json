@@ -1,0 +1,14 @@
+{"num_instructions":2,
+"all_instrs":[
+{"num_warnings":1,
+"at":"  %arrayidx = getelementptr inbounds [16 x %struct.atomic_t], [16 x %struct.atomic_t]* @fa_lock, i64 0, i64 %idxprom, !dbg !1264","at_line":277,"at_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/arch\/amd64\/mm\/buddy_pmm.c","at_func":"__buddy_nr_free_pages","warnings":[
+{"warn_no":1,"warn_data":{"by":"GlobalVariableRaceDetector says:","warn_str":"Trying to use a global variable without locking.","at":"  %arrayidx = getelementptr inbounds [16 x %struct.atomic_t], [16 x %struct.atomic_t]* @fa_lock, i64 0, i64 %idxprom, !dbg !1264","at_line":277,"at_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/arch\/amd64\/mm\/buddy_pmm.c","at_func":"__buddy_nr_free_pages","inst_trace":[{"instr":"  br label %for.cond, !dbg !1261","instr_loc":294,"instr_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/arch\/amd64\/mm\/buddy_pmm.c","instr_func":"buddy_nr_free_pages"},{"instr":"  %call = call i64 @__buddy_nr_free_pages(i32 %i.0) #7, !dbg !1268","instr_loc":295,"instr_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/arch\/amd64\/mm\/buddy_pmm.c","instr_func":"buddy_nr_free_pages"}]}
+}
+]},
+{"num_warnings":1,
+"at":"  %0 = load i32, i32* @is_panic, align 4, !dbg !1263","at_line":15,"at_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/arch\/amd64\/debug\/panic.c","at_func":"__panic","warnings":[
+{"warn_no":1,"warn_data":{"by":"GlobalVariableRaceDetector says:","warn_str":"Trying to use a global variable without locking.","at":"  %0 = load i32, i32* @is_panic, align 4, !dbg !1263","at_line":15,"at_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/arch\/amd64\/debug\/panic.c","at_func":"__panic","inst_trace":[{"instr":"  br label %for.cond, !dbg !1261","instr_loc":294,"instr_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/arch\/amd64\/mm\/buddy_pmm.c","instr_func":"buddy_nr_free_pages"},{"instr":"  %call = call i64 @__buddy_nr_free_pages(i32 %i.0) #7, !dbg !1268","instr_loc":295,"instr_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/arch\/amd64\/mm\/buddy_pmm.c","instr_func":"buddy_nr_free_pages"},{"instr":"  call void @spinlock_release(%struct.atomic_t* %arrayidx6) #7, !dbg !1287","instr_loc":281,"instr_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/arch\/amd64\/mm\/buddy_pmm.c","instr_func":"__buddy_nr_free_pages"},{"instr":"  call void (i8*, i32, i8*, ...) @__panic(i8* getelementptr inbounds ([72 x i8], [72 x i8]* @.str.10, i32 0, i32 0), i32 30, i8* getelementptr inbounds ([21 x i8], [21 x i8]* @.str.2, i32 0, i32 0), i8* getelementptr inbounds ([16 x i8], [16 x i8]* @.str.11, i32 0, i32 0)) #7, !dbg !1264","instr_loc":30,"instr_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/arch\/amd64\/libs\/spinlock.h","instr_func":"spinlock_release"}]}
+}
+]}]
+
+}

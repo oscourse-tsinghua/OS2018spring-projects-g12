@@ -1,0 +1,44 @@
+{"num_instructions":8,
+"all_instrs":[
+{"num_warnings":1,
+"at":"  %0 = load i32, i32* @is_panic, align 4, !dbg !2432","at_line":15,"at_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/arch\/amd64\/debug\/panic.c","at_func":"__panic","warnings":[
+{"warn_no":1,"warn_data":{"by":"GlobalVariableRaceDetector says:","warn_str":"Trying to use a global variable without locking.","at":"  %0 = load i32, i32* @is_panic, align 4, !dbg !2432","at_line":15,"at_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/arch\/amd64\/debug\/panic.c","at_func":"__panic","inst_trace":[{"instr":"  br label %do.body, !dbg !2430","instr_loc":23,"instr_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/schedule\/sched_MLFQ.c","instr_func":"MLFQ_enqueue"},{"instr":"  call void (i8*, i32, i8*, ...) @__panic(i8* getelementptr inbounds ([67 x i8], [67 x i8]* @.str.1.84, i32 0, i32 0), i32 23, i8* getelementptr inbounds ([21 x i8], [21 x i8]* @.str.2.85, i32 0, i32 0), i8* getelementptr inbounds ([30 x i8], [30 x i8]* @.str.3.86, i32 0, i32 0)) #7, !dbg !2440","instr_loc":23,"instr_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/schedule\/sched_MLFQ.c","instr_func":"MLFQ_enqueue"}]}
+}
+]},
+{"num_warnings":1,
+"at":"  %0 = load %struct.list_entry*, %struct.list_entry** %next.i, align 8, !dbg !2438","at_line":23,"at_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/schedule\/sched_MLFQ.c","at_func":"MLFQ_enqueue","warnings":[
+{"warn_no":1,"warn_data":{"by":"TaintedPointerDereferenceChecker says:","warn_str":"Trying to read from a user pointer.","at":"  %0 = load %struct.list_entry*, %struct.list_entry** %next.i, align 8, !dbg !2438","at_line":23,"at_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/schedule\/sched_MLFQ.c","at_func":"MLFQ_enqueue","inst_trace":[{"instr":"  br label %do.body, !dbg !2430","instr_loc":23,"instr_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/schedule\/sched_MLFQ.c","instr_func":"MLFQ_enqueue"},{"instr":"  %run_link = getelementptr inbounds %struct.proc_struct, %struct.proc_struct* %proc, i32 0, i32 24, !dbg !2431","instr_loc":23,"instr_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/schedule\/sched_MLFQ.c","instr_func":"MLFQ_enqueue"},{"instr":"  %next.i = getelementptr inbounds %struct.list_entry, %struct.list_entry* %run_link, i32 0, i32 1, !dbg !2438","instr_loc":23,"instr_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/schedule\/sched_MLFQ.c","instr_func":"MLFQ_enqueue"}]}
+}
+]},
+{"num_warnings":1,
+"at":"  %1 = load %struct.run_queue*, %struct.run_queue** %rq1, align 8, !dbg !2447","at_line":25,"at_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/schedule\/sched_MLFQ.c","at_func":"MLFQ_enqueue","warnings":[
+{"warn_no":1,"warn_data":{"by":"TaintedPointerDereferenceChecker says:","warn_str":"Trying to read from a user pointer.","at":"  %1 = load %struct.run_queue*, %struct.run_queue** %rq1, align 8, !dbg !2447","at_line":25,"at_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/schedule\/sched_MLFQ.c","at_func":"MLFQ_enqueue","inst_trace":[{"instr":"  br label %do.body, !dbg !2430","instr_loc":23,"instr_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/schedule\/sched_MLFQ.c","instr_func":"MLFQ_enqueue"},{"instr":"  %rq1 = getelementptr inbounds %struct.proc_struct, %struct.proc_struct* %proc, i32 0, i32 23, !dbg !2447","instr_loc":25,"instr_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/schedule\/sched_MLFQ.c","instr_func":"MLFQ_enqueue"}]}
+}
+]},
+{"num_warnings":1,
+"at":"  %2 = load i32, i32* %time_slice, align 8, !dbg !2451","at_line":25,"at_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/schedule\/sched_MLFQ.c","at_func":"MLFQ_enqueue","warnings":[
+{"warn_no":1,"warn_data":{"by":"TaintedPointerDereferenceChecker says:","warn_str":"Trying to read from a user pointer.","at":"  %2 = load i32, i32* %time_slice, align 8, !dbg !2451","at_line":25,"at_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/schedule\/sched_MLFQ.c","at_func":"MLFQ_enqueue","inst_trace":[{"instr":"  br label %do.body, !dbg !2430","instr_loc":23,"instr_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/schedule\/sched_MLFQ.c","instr_func":"MLFQ_enqueue"},{"instr":"  %time_slice = getelementptr inbounds %struct.proc_struct, %struct.proc_struct* %proc, i32 0, i32 25, !dbg !2451","instr_loc":25,"instr_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/schedule\/sched_MLFQ.c","instr_func":"MLFQ_enqueue"}]}
+}
+]},
+{"num_warnings":1,
+"at":"  %3 = load %struct.run_queue*, %struct.run_queue** %rq4, align 8, !dbg !2455","at_line":26,"at_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/schedule\/sched_MLFQ.c","at_func":"MLFQ_enqueue","warnings":[
+{"warn_no":1,"warn_data":{"by":"TaintedPointerDereferenceChecker says:","warn_str":"Trying to read from a user pointer.","at":"  %3 = load %struct.run_queue*, %struct.run_queue** %rq4, align 8, !dbg !2455","at_line":26,"at_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/schedule\/sched_MLFQ.c","at_func":"MLFQ_enqueue","inst_trace":[{"instr":"  br label %do.body, !dbg !2430","instr_loc":23,"instr_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/schedule\/sched_MLFQ.c","instr_func":"MLFQ_enqueue"},{"instr":"  %rq4 = getelementptr inbounds %struct.proc_struct, %struct.proc_struct* %proc, i32 0, i32 23, !dbg !2455","instr_loc":26,"instr_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/schedule\/sched_MLFQ.c","instr_func":"MLFQ_enqueue"}]}
+}
+]},
+{"num_warnings":1,
+"at":"  %4 = load %struct.list_entry*, %struct.list_entry** %next.i11, align 8, !dbg !2460","at_line":26,"at_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/schedule\/sched_MLFQ.c","at_func":"MLFQ_enqueue","warnings":[
+{"warn_no":1,"warn_data":{"by":"TaintedPointerDereferenceChecker says:","warn_str":"Trying to read from a user pointer.","at":"  %4 = load %struct.list_entry*, %struct.list_entry** %next.i11, align 8, !dbg !2460","at_line":26,"at_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/schedule\/sched_MLFQ.c","at_func":"MLFQ_enqueue","inst_trace":[{"instr":"  br label %do.body, !dbg !2430","instr_loc":23,"instr_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/schedule\/sched_MLFQ.c","instr_func":"MLFQ_enqueue"},{"instr":"  %rq4 = getelementptr inbounds %struct.proc_struct, %struct.proc_struct* %proc, i32 0, i32 23, !dbg !2455","instr_loc":26,"instr_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/schedule\/sched_MLFQ.c","instr_func":"MLFQ_enqueue"},{"instr":"  %rq_link = getelementptr inbounds %struct.run_queue, %struct.run_queue* %3, i32 0, i32 3, !dbg !2455","instr_loc":26,"instr_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/schedule\/sched_MLFQ.c","instr_func":"MLFQ_enqueue"},{"instr":"  %next.i11 = getelementptr inbounds %struct.list_entry, %struct.list_entry* %rq_link, i32 0, i32 1, !dbg !2460","instr_loc":26,"instr_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/schedule\/sched_MLFQ.c","instr_func":"MLFQ_enqueue"}]}
+}
+]},
+{"num_warnings":1,
+"at":"  %7 = load %struct.run_queue*, %struct.run_queue** %rq8, align 8, !dbg !2464","at_line":28,"at_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/schedule\/sched_MLFQ.c","at_func":"MLFQ_enqueue","warnings":[
+{"warn_no":1,"warn_data":{"by":"TaintedPointerDereferenceChecker says:","warn_str":"Trying to read from a user pointer.","at":"  %7 = load %struct.run_queue*, %struct.run_queue** %rq8, align 8, !dbg !2464","at_line":28,"at_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/schedule\/sched_MLFQ.c","at_func":"MLFQ_enqueue","inst_trace":[{"instr":"  br label %do.body, !dbg !2430","instr_loc":23,"instr_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/schedule\/sched_MLFQ.c","instr_func":"MLFQ_enqueue"},{"instr":"  %rq8 = getelementptr inbounds %struct.proc_struct, %struct.proc_struct* %proc, i32 0, i32 23, !dbg !2464","instr_loc":28,"instr_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/schedule\/sched_MLFQ.c","instr_func":"MLFQ_enqueue"}]}
+}
+]},
+{"num_warnings":1,
+"at":"  %8 = load %struct.sched_class*, %struct.sched_class** @sched_class.83, align 8, !dbg !2468","at_line":31,"at_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/schedule\/sched_MLFQ.c","at_func":"MLFQ_enqueue","warnings":[
+{"warn_no":1,"warn_data":{"by":"GlobalVariableRaceDetector says:","warn_str":"Trying to use a global variable without locking.","at":"  %8 = load %struct.sched_class*, %struct.sched_class** @sched_class.83, align 8, !dbg !2468","at_line":31,"at_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/schedule\/sched_MLFQ.c","at_func":"MLFQ_enqueue","inst_trace":[{"instr":"  br label %do.body, !dbg !2430","instr_loc":23,"instr_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/schedule\/sched_MLFQ.c","instr_func":"MLFQ_enqueue"}]}
+}
+]}]
+
+}

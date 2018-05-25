@@ -1,0 +1,31 @@
+{"num_contexts":3,
+"all_contexts":[
+{"num_warnings":1,
+"context":[{"instr":"  br label %do.body, !dbg !1259","lineno":286,"file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/arch\/amd64\/mm\/buddy_pmm.c"}
+
+],"warnings":[
+{"warn_no":1,"warn_data":{"by":"TaintedPointerDereferenceChecker says:","warn_str":"Trying to read from a user pointer.","at":"  %0 = load i32, i32* %id, align 8, !dbg !1269","at_line":287,"at_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/arch\/amd64\/mm\/buddy_pmm.c","at_func":"buddy_nr_free_pages_numa","inst_trace":[{"instr":"  br label %do.body, !dbg !1259","instr_loc":286,"instr_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/arch\/amd64\/mm\/buddy_pmm.c","instr_func":"buddy_nr_free_pages_numa"},{"instr":"  %id = getelementptr inbounds %struct.numa_node, %struct.numa_node* %node, i32 0, i32 0, !dbg !1269","instr_loc":287,"instr_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/arch\/amd64\/mm\/buddy_pmm.c","instr_func":"buddy_nr_free_pages_numa"}]}
+}
+]},
+{"num_warnings":1,
+"context":[{"instr":"  br label %do.body, !dbg !1259","lineno":286,"file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/arch\/amd64\/mm\/buddy_pmm.c"}
+,{"instr":"  call void (i8*, i32, i8*, ...) @__panic(i8* getelementptr inbounds ([71 x i8], [71 x i8]* @.str.1, i32 0, i32 0), i32 286, i8* getelementptr inbounds ([21 x i8], [21 x i8]* @.str.2, i32 0, i32 0), i8* getelementptr inbounds ([13 x i8], [13 x i8]* @.str.15, i32 0, i32 0)) #7, !dbg !1264","lineno":286,"file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/arch\/amd64\/mm\/buddy_pmm.c"}
+
+],"warnings":[
+{"warn_no":1,"warn_data":{"by":"GlobalVariableRaceDetector says:","warn_str":"Trying to use a global variable without locking.","at":"  %0 = load i32, i32* @is_panic, align 4, !dbg !1263","at_line":15,"at_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/arch\/amd64\/debug\/panic.c","at_func":"__panic","inst_trace":[{"instr":"  br label %do.body, !dbg !1259","instr_loc":286,"instr_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/arch\/amd64\/mm\/buddy_pmm.c","instr_func":"buddy_nr_free_pages_numa"},{"instr":"  call void (i8*, i32, i8*, ...) @__panic(i8* getelementptr inbounds ([71 x i8], [71 x i8]* @.str.1, i32 0, i32 0), i32 286, i8* getelementptr inbounds ([21 x i8], [21 x i8]* @.str.2, i32 0, i32 0), i8* getelementptr inbounds ([13 x i8], [13 x i8]* @.str.15, i32 0, i32 0)) #7, !dbg !1264","instr_loc":286,"instr_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/arch\/amd64\/mm\/buddy_pmm.c","instr_func":"buddy_nr_free_pages_numa"}]}
+}
+]},
+{"num_warnings":3,
+"context":[{"instr":"  br label %do.body, !dbg !1259","lineno":286,"file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/arch\/amd64\/mm\/buddy_pmm.c"}
+,{"instr":"  %call = call i64 @__buddy_nr_free_pages(i32 %0) #8, !dbg !1270","lineno":287,"file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/arch\/amd64\/mm\/buddy_pmm.c"}
+
+],"warnings":[
+{"warn_no":1,"warn_data":{"by":"GlobalVariableRaceDetector says:","warn_str":"Trying to use a global variable without locking.","at":"  %arrayidx = getelementptr inbounds [16 x %struct.atomic_t], [16 x %struct.atomic_t]* @fa_lock, i64 0, i64 %idxprom, !dbg !1264","at_line":277,"at_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/arch\/amd64\/mm\/buddy_pmm.c","at_func":"__buddy_nr_free_pages","inst_trace":[{"instr":"  br label %do.body, !dbg !1259","instr_loc":286,"instr_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/arch\/amd64\/mm\/buddy_pmm.c","instr_func":"buddy_nr_free_pages_numa"},{"instr":"  %call = call i64 @__buddy_nr_free_pages(i32 %0) #8, !dbg !1270","instr_loc":287,"instr_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/arch\/amd64\/mm\/buddy_pmm.c","instr_func":"buddy_nr_free_pages_numa"}]}
+},
+{"warn_no":2,"warn_data":{"by":"IntegerOverflowDetector says:","warn_str":"Potential overflow, using tainted value in binary operation.","at":"  %mul = mul i32 %0, %shl, !dbg !1280","at_line":279,"at_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/arch\/amd64\/mm\/buddy_pmm.c","at_func":"__buddy_nr_free_pages","inst_trace":[{"instr":"  br label %do.body, !dbg !1259","instr_loc":286,"instr_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/arch\/amd64\/mm\/buddy_pmm.c","instr_func":"buddy_nr_free_pages_numa"},{"instr":"  %0 = load i32, i32* %nr_free, align 16, !dbg !1277","instr_loc":279,"instr_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/arch\/amd64\/mm\/buddy_pmm.c","instr_func":"__buddy_nr_free_pages"}]}
+},
+{"warn_no":3,"warn_data":{"by":"IntegerOverflowDetector says:","warn_str":"Potential overflow, using tainted value in binary operation.","at":"  %add = add i64 %ret.0, %conv, !dbg !1281","at_line":279,"at_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/arch\/amd64\/mm\/buddy_pmm.c","at_func":"__buddy_nr_free_pages","inst_trace":[{"instr":"  br label %do.body, !dbg !1259","instr_loc":286,"instr_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/arch\/amd64\/mm\/buddy_pmm.c","instr_func":"buddy_nr_free_pages_numa"},{"instr":"  %0 = load i32, i32* %nr_free, align 16, !dbg !1277","instr_loc":279,"instr_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/arch\/amd64\/mm\/buddy_pmm.c","instr_func":"__buddy_nr_free_pages"},{"instr":"  %mul = mul i32 %0, %shl, !dbg !1280","instr_loc":279,"instr_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/arch\/amd64\/mm\/buddy_pmm.c","instr_func":"__buddy_nr_free_pages"}]}
+}
+]}]
+
+}

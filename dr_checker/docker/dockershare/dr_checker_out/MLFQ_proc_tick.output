@@ -1,0 +1,29 @@
+Args: /dr_checker/drcheckerdeps/llvm/build/bin/opt -analyze -debug -load /dockershare/gitrepo/helper_scripts/../llvm_analysis/MainAnalysisPasses/build_dir/SoundyAliasAnalysis/libSoundyAliasAnalysis.so -dr_checker -toCheckFunction=MLFQ_proc_tick -functionType=NEWTYPE -skipInit=1 -outputFile=/dockershare/ucore_plus/dr_checker_out/MLFQ_proc_tick.json -instrWarnOutput=/dockershare/ucore_plus/dr_checker_out/instr_warnings/MLFQ_proc_tickinstr_warngs.json /tmp/tmphmR8zb 
+
+Features:+64bit,+sse2
+CPU:generic
+
+Subtarget features: SSELevel 2, 3DNowLevel 0, 64bit 1
+Provided Function Type:NEWTYPE, Function Name:MLFQ_proc_tick
+????????????????????
+Starting Analyzing function:MLFQ_proc_tick
+[+] Writing output to:/dockershare/ucore_plus/dr_checker_out/MLFQ_proc_tick.json
+[+] Return message from file write:Success
+[+] Writing Instr output to:/dockershare/ucore_plus/dr_checker_out/instr_warnings/MLFQ_proc_tickinstr_warngs.json
+[+] Return message from file write:Success
+Printing analysis 'Soundy Driver Checker':
+Pass::print not implemented for pass: 'Soundy Driver Checker'!
+Args: /dr_checker/drcheckerdeps/llvm/build/bin/opt -analyze -debug -load /dockershare/gitrepo/helper_scripts/../llvm_analysis/MainAnalysisPasses/build_dir/SoundyAliasAnalysis/libSoundyAliasAnalysis.so -dr_checker -toCheckFunction=MLFQ_proc_tick -functionType=NEWTYPE -skipInit=1 -outputFile=/dockershare/ucore_plus/dr_checker_out/MLFQ_proc_tick.json -instrWarnOutput=/dockershare/ucore_plus/dr_checker_out/instr_warnings/MLFQ_proc_tickinstr_warngs.json /tmp/tmp0jb9Yd 
+
+Features:+64bit,+sse2
+CPU:generic
+
+Subtarget features: SSELevel 2, 3DNowLevel 0, 64bit 1
+Provided Function Type:NEWTYPE, Function Name:MLFQ_proc_tick
+Starting Analyzing function:MLFQ_proc_tick
+[+] Writing output to:/dockershare/ucore_plus/dr_checker_out/MLFQ_proc_tick.json
+[+] Return message from file write:Success
+[+] Writing Instr output to:/dockershare/ucore_plus/dr_checker_out/instr_warnings/MLFQ_proc_tickinstr_warngs.json
+[+] Return message from file write:Success
+Printing analysis 'Soundy Driver Checker':
+Pass::print not implemented for pass: 'Soundy Driver Checker'!

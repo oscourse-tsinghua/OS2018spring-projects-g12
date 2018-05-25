@@ -1,0 +1,69 @@
+Args: /dr_checker/drcheckerdeps/llvm/build/bin/opt -analyze -debug -load /dockershare/gitrepo/helper_scripts/../llvm_analysis/MainAnalysisPasses/build_dir/SoundyAliasAnalysis/libSoundyAliasAnalysis.so -dr_checker -toCheckFunction=buddy_nr_free_pages -functionType=NEWTYPE -skipInit=1 -outputFile=/dockershare/ucore_plus/dr_checker_out/buddy_nr_free_pages.json -instrWarnOutput=/dockershare/ucore_plus/dr_checker_out/instr_warnings/buddy_nr_free_pagesinstr_warngs.json /tmp/tmpFRNRk7 
+
+Features:+64bit,+sse2
+CPU:generic
+
+Subtarget features: SSELevel 2, 3DNowLevel 0, 64bit 1
+Provided Function Type:NEWTYPE, Function Name:buddy_nr_free_pages
+????????????????????
+Starting Analyzing function:buddy_nr_free_pages
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.value
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.value
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.declare
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.value
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.value
+MAX CALL SITE DEPTH REACHED, IGNORING:spinlock_acquire.5
+MAX CALL SITE DEPTH REACHED, IGNORING:vprintfmt
+MAX CALL SITE DEPTH REACHED, IGNORING:spinlock_release.7
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.value
+MAX CALL SITE DEPTH REACHED, IGNORING:nop_pause.6
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.value
+MAX CALL SITE DEPTH REACHED, IGNORING:__panic
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.value
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.value
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.declare
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.value
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.value
+MAX CALL SITE DEPTH REACHED, IGNORING:spinlock_acquire.5
+MAX CALL SITE DEPTH REACHED, IGNORING:vprintfmt
+MAX CALL SITE DEPTH REACHED, IGNORING:spinlock_release.7
+[+] Writing output to:/dockershare/ucore_plus/dr_checker_out/buddy_nr_free_pages.json
+[+] Return message from file write:Success
+[+] Writing Instr output to:/dockershare/ucore_plus/dr_checker_out/instr_warnings/buddy_nr_free_pagesinstr_warngs.json
+[+] Return message from file write:Success
+Printing analysis 'Soundy Driver Checker':
+Pass::print not implemented for pass: 'Soundy Driver Checker'!
+Args: /dr_checker/drcheckerdeps/llvm/build/bin/opt -analyze -debug -load /dockershare/gitrepo/helper_scripts/../llvm_analysis/MainAnalysisPasses/build_dir/SoundyAliasAnalysis/libSoundyAliasAnalysis.so -dr_checker -toCheckFunction=buddy_nr_free_pages -functionType=NEWTYPE -skipInit=1 -outputFile=/dockershare/ucore_plus/dr_checker_out/buddy_nr_free_pages.json -instrWarnOutput=/dockershare/ucore_plus/dr_checker_out/instr_warnings/buddy_nr_free_pagesinstr_warngs.json /tmp/tmpVyRzv6 
+
+Features:+64bit,+sse2
+CPU:generic
+
+Subtarget features: SSELevel 2, 3DNowLevel 0, 64bit 1
+Provided Function Type:NEWTYPE, Function Name:buddy_nr_free_pages
+Starting Analyzing function:buddy_nr_free_pages
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.value
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.value
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.declare
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.value
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.value
+MAX CALL SITE DEPTH REACHED, IGNORING:spinlock_acquire.5
+MAX CALL SITE DEPTH REACHED, IGNORING:vprintfmt
+MAX CALL SITE DEPTH REACHED, IGNORING:spinlock_release.7
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.value
+MAX CALL SITE DEPTH REACHED, IGNORING:nop_pause.6
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.value
+MAX CALL SITE DEPTH REACHED, IGNORING:__panic
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.value
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.value
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.declare
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.value
+MAX CALL SITE DEPTH REACHED, IGNORING:llvm.dbg.value
+MAX CALL SITE DEPTH REACHED, IGNORING:spinlock_acquire.5
+MAX CALL SITE DEPTH REACHED, IGNORING:vprintfmt
+MAX CALL SITE DEPTH REACHED, IGNORING:spinlock_release.7
+[+] Writing output to:/dockershare/ucore_plus/dr_checker_out/buddy_nr_free_pages.json
+[+] Return message from file write:Success
+[+] Writing Instr output to:/dockershare/ucore_plus/dr_checker_out/instr_warnings/buddy_nr_free_pagesinstr_warngs.json
+[+] Return message from file write:Success
+Printing analysis 'Soundy Driver Checker':
+Pass::print not implemented for pass: 'Soundy Driver Checker'!

@@ -1,0 +1,11 @@
+{"num_contexts":1,
+"all_contexts":[
+{"num_warnings":1,
+"context":[{"instr":"  %run_list = getelementptr inbounds %struct.run_queue, %struct.run_queue* %rq, i32 0, i32 0, !dbg !2428","lineno":33,"file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/schedule\/sched_RR.c"}
+
+],"warnings":[
+{"warn_no":1,"warn_data":{"by":"TaintedPointerDereferenceChecker says:","warn_str":"Trying to read from a user pointer.","at":"  %0 = load %struct.list_entry*, %struct.list_entry** %next.i, align 8, !dbg !2432","at_line":31,"at_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/schedule\/sched_RR.c","at_func":"RR_pick_next","inst_trace":[{"instr":"  %run_list = getelementptr inbounds %struct.run_queue, %struct.run_queue* %rq, i32 0, i32 0, !dbg !2428","instr_loc":33,"instr_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/schedule\/sched_RR.c","instr_func":"RR_pick_next"},{"instr":"  %next.i = getelementptr inbounds %struct.list_entry, %struct.list_entry* %run_list, i32 0, i32 1, !dbg !2432","instr_loc":31,"instr_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/schedule\/sched_RR.c","instr_func":"RR_pick_next"}]}
+}
+]}]
+
+}

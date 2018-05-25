@@ -1,0 +1,14 @@
+{"num_instructions":2,
+"all_instrs":[
+{"num_warnings":1,
+"at":"  %2 = load i32*, i32** @xapic, align 8, !dbg !76797","at_line":171,"at_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/arch\/amd64\/driver\/xapic.c","at_func":"x_lapic_id","warnings":[
+{"warn_no":1,"warn_data":{"by":"GlobalVariableRaceDetector says:","warn_str":"Trying to use a global variable without locking.","at":"  %2 = load i32*, i32** @xapic, align 8, !dbg !76797","at_line":171,"at_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/arch\/amd64\/driver\/xapic.c","at_func":"x_lapic_id","inst_trace":[{"instr":"  %0 = call i64 asm sideeffect \"pushfq; popq $0\", \"=r,~{dirflag},~{fpsr},~{flags}\"() #3, !dbg !76782, !srcloc !76785","instr_loc":163,"instr_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/arch\/amd64\/driver\/xapic.c","instr_func":"x_lapic_id"}]}
+}
+]},
+{"num_warnings":1,
+"at":"  %0 = load i32, i32* @is_panic, align 4, !dbg !76786","at_line":15,"at_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/arch\/amd64\/debug\/panic.c","at_func":"__panic","warnings":[
+{"warn_no":1,"warn_data":{"by":"GlobalVariableRaceDetector says:","warn_str":"Trying to use a global variable without locking.","at":"  %0 = load i32, i32* @is_panic, align 4, !dbg !76786","at_line":15,"at_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/arch\/amd64\/debug\/panic.c","at_func":"__panic","inst_trace":[{"instr":"  %0 = call i64 asm sideeffect \"pushfq; popq $0\", \"=r,~{dirflag},~{fpsr},~{flags}\"() #3, !dbg !76782, !srcloc !76785","instr_loc":163,"instr_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/arch\/amd64\/driver\/xapic.c","instr_func":"x_lapic_id"},{"instr":"  call void (i8*, i32, i8*, ...) @__panic(i8* getelementptr inbounds ([71 x i8], [71 x i8]* @.str.1.1938, i32 0, i32 0), i32 168, i8* getelementptr inbounds ([58 x i8], [58 x i8]* @.str.6.1945, i32 0, i32 0), i8* %1) #7, !dbg !76795","instr_loc":167,"instr_file":"\/dockershare\/ucore_plus\/ucore\/src\/kern-ucore\/arch\/amd64\/driver\/xapic.c","instr_func":"x_lapic_id"}]}
+}
+]}]
+
+}
