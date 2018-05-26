@@ -49,6 +49,7 @@ serve -s ./client/build
 
 在浏览器中运行shell提示的网址即可
 
+
 ## 实验目标及计划
 
 实验目标描述：尝试一些论文或者工具的方式来寻找ucore_plus的bug
@@ -60,7 +61,28 @@ serve -s ./client/build
 
 ### Dr.Checker原理
 
-![](/Users/junxianshen/Documents/本学期课程/操作系统/课程设计/pic.png)
+![](https://github.com/oscourse-tsinghua/OS2018spring-projects-g12/tree/master/final_report/pictures/dr_checker.png)
+
+#### 概述
+
+Dr.Checker主要分成五个部分，在通过将操作系统内核生成的中间文件转化成llvm bitcode之后，会调用Driver link、Parse Headers和Entry Point Identifier生成要进行最终检查的函数入口。在最后进行的检查中，我们关注于
+
+- Function local variables
+- Dynamically allocated variables
+- Global variables
+
+三种变量，和llvm的
+
+- Alloca
+- binOp
+- Load
+- Store
+- GetElementPtr
+
+五种操作。在对核心代码进行SDTraversal遍历之后，我们通过对得到的有序的SCC进行分析，最后得到detector检测到的warnings
+
+![](https://github.com/oscourse-tsinghua/OS2018spring-projects-g12/tree/master/final_report/pictures/traversal.png)
+
 
 #### 编译操作系统内核并生成中间文件
 
@@ -147,9 +169,13 @@ ucore_plus的分析，修改部分makefile
 
 当前的总warning数量如下：
 
-![image-20180526140709332](/var/folders/rd/qdkj740n35z3b2_7dwzt4tzr0000gn/T/abnerworks.Typora/image-20180526140709332.png)
+![](https://github.com/oscourse-tsinghua/OS2018spring-projects-g12/tree/master/final_report/pictures/warnings.png)
 
 ## 对bug的确认
 
-在现在的状态下，有主要作用的是TLBD、GVRD、TAD这三种warning的报告，分别代表有可能被污染的数据作为循环边界、没有加锁的全局变量和有可能产生运算溢出的数据。
+在现在的状态下，有主要作用的是TLBD、GVRD、TAD这三种warning的报告，分别代表有可能被污染的数据作为循环边界、没有加锁的全局变量和有可能产生运算溢出的数据。  
+这些detector主要是用于找到warning而不是用于寻找bug，比如说整数溢出，在静态代码分析是很难确定这是一个bug的，只是确定这个操作可能会出现问题。
+
+找到的warning如下：
+
 
