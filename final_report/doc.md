@@ -121,7 +121,8 @@ parse headers的原作用是将kernel中引用的linux的库文件进行检测�
 2. 修改ucore_plus/ucore/src/kern-ucore/Makefile.subdir 
 - 新增NOW_DIR = $(shell pwd) 
 - $(OBJPATH)/%.ko: %.c 变成 $(OBJPATH)/%.ko: $(NOW_DIR)/%.c   
-这样在makeout.txt输出的文件路径为绝对路径而不是相对makefile.subdir的相对路径，保证后面的分析能够根据输出信息找到对应的文件 
+这样在makeout.txt输出的文件路径为绝对路径而不是相对makefile.subdir的相对路径，保证后面的分析能够根据输出信息找到对应的文件   
+其中run_all.py中compiler_name为 $(CROSS_COMPILE)gcc，在这里为\"\"gcc   
 
 #### llvm bitcode generation
 
