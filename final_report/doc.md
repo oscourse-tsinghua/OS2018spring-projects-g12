@@ -176,6 +176,12 @@ ucore_plus的分析，修改部分makefile
 在现在的状态下，有主要作用的是TLBD、GVRD、TAD这三种warning的报告，分别代表有可能被污染的数据作为循环边界、没有加锁的全局变量和有可能产生运算溢出的数据。  
 这些detector主要是用于找到warning而不是用于寻找bug，比如说整数溢出，在静态代码分析是很难确定这是一个bug的，只是确定这个操作可能会出现问题。
 
-找到的warning如下：
+找到的warning如下：  
+Try to use a global variable without locking   
+![](https://github.com/oscourse-tsinghua/OS2018spring-projects-g12/blob/master/final_report/pictures/warning1.png)  
 
+Integer Overflow  
+![](https://github.com/oscourse-tsinghua/OS2018spring-projects-g12/blob/master/final_report/pictures/warning2.png)
 
+Loop is bounded by a tainted value  
+![](https://github.com/oscourse-tsinghua/OS2018spring-projects-g12/blob/master/final_report/pictures/warning3.png)
