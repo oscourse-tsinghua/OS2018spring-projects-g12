@@ -70,11 +70,13 @@ static int dev_stdin_read(char *buf, size_t len, int io_flags)
 	bool intr_flag;
 	local_intr_save(intr_flag);
 	{
-		while (1) {
+		while (1) 
+		{
 			if (ret >= len)
 				break;
 try_again:
-			if (p_rpos < p_wpos) {
+			if (p_rpos < p_wpos) 
+			{
 				char c = stdin_buffer[p_rpos % STDIN_BUFSIZE];
 				//FIXME
 				cons_putc(c);
@@ -83,12 +85,14 @@ try_again:
 				ret++;
 				if (p_rpos >= p_wpos)
 					break;
-			} else {
-        if(/*len == 1 && */(io_flags & O_NONBLOCK)) {
-          ret = -E_AGAIN;
-          //panic("%x", io_flags);
-          break;
-        }
+			} 
+			else {
+				if(/*len == 1 && */(io_flags & O_NONBLOCK)) 
+				{
+					ret = -E_AGAIN;
+					//panic("%x", io_flags);
+					break;
+				}
 				wait_t __wait, *wait = &__wait;
 				wait_current_set(wait_queue, wait, WT_KBD);
 				local_intr_restore(intr_flag);

@@ -101,7 +101,8 @@ int _cond_resched(void)
 
 void wait_for_completion(struct completion *x)
 {
-	while (!(x->done)) {
+	while (!(x->done)) 
+	{
 		//FIXME
 		//intr_enable();
 		//schedule();
