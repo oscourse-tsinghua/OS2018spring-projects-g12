@@ -61,7 +61,7 @@ serve -s ./client/build
 
 ### Dr.Checker原理
 
-![](https://github.com/oscourse-tsinghua/OS2018spring-projects-g12/tree/master/final_report/pictures/dr_checker.png)
+![](https://github.com/oscourse-tsinghua/OS2018spring-projects-g12/blob/master/final_report/pictures/dr_checker.png)
 
 #### 概述
 
@@ -81,7 +81,7 @@ Dr.Checker主要分成五个部分，在通过将操作系统内核生成的中�
 
 五种操作。在对核心代码进行SDTraversal遍历之后，我们通过对得到的有序的SCC进行分析，最后得到detector检测到的warnings
 
-![](https://github.com/oscourse-tsinghua/OS2018spring-projects-g12/tree/master/final_report/pictures/traversal.png)
+![](https://github.com/oscourse-tsinghua/OS2018spring-projects-g12/blob/master/final_report/pictures/traversal.png)
 
 
 #### 编译操作系统内核并生成中间文件
@@ -169,7 +169,7 @@ ucore_plus的分析，修改部分makefile
 
 当前的总warning数量如下：
 
-![](https://github.com/oscourse-tsinghua/OS2018spring-projects-g12/tree/master/final_report/pictures/warnings.png)
+![](https://github.com/oscourse-tsinghua/OS2018spring-projects-g12/blob/master/final_report/pictures/warnings.png)
 
 ## 对bug的确认
 
