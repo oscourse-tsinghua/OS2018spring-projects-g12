@@ -142,7 +142,8 @@ parse headers的原作用是将kernel中引用的linux的库文件进行检测�
 
 #### Soundy Analysis Runner
 
-在这部分中我们增加了四种detector的检测范围，让这四种detector中可以生成正确的结果。
+在这部分中我们增加了四种detector的检测范围，让这四种detector中可以生成正确的结果。  
+这个过程，首先通过分析entrypoint函数参数的类型（可以通过llvm去判断），同时更新全局的状态，然后遍历程序流图，然后利用detector来检测问题
 
 ## 实验分工
 
