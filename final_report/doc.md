@@ -94,7 +94,12 @@ parse headers的原作用是将kernel中引用的linux的库文件进行检测�
 
 #### 编译操作系统内核并生成中间文件
 
-将ucore plus的make生成结果输出到了makeout.txt当中
+将ucore plus的make生成结果输出到了makeout.txt当中，这个过程需要修改ucore_plus的makefile来修改产生makeout.txt  
+1. 发现ucore_plus目录下的makefile有一些变量没什么用，疑似移植的残留，比如quiet，KBUILD_VERBOSE等 
+2. 修改ucore_plus/ucore/src/kern-ucore/Makefile.subdir 
+- 新增NOW_DIR = $(shell pwd) 
+- $(OBJPATH)/%.ko: %.c 变成 $(OBJPATH)/%.ko: $(NOW_DIR)/%.c   
+这样在makeout.txt输出的文件路径为绝对路径而不是相对makefile.subdir的相对路径，保证后面的分析能够根据输出信息找到对应的文件 
 
 #### llvm bitcode generation
 
@@ -119,22 +124,22 @@ parse headers的原作用是将kernel中引用的linux的库文件进行检测�
 ## 实验分工
 
 沈俊贤：
-论文阅读以及代码分析
-llvm的学习
-完成llvm的build 
-完成driver_linker的修改
-完成ParseHeaders的修改
-完成EntryPointIdentifier的修改
-核对验证找出来的warnings
+论文阅读以及代码分析  
+llvm的学习  
+完成llvm的build   
+完成driver_linker的修改  
+完成ParseHeaders的修改  
+完成EntryPointIdentifier的修改  
+核对验证找出来的warnings  
 
 刘攀：
-论文阅读以及代码分析
-llvm的学习
-ucore_plus的分析，修改部分makefile
-完成llvm的build
-完成SoundyAnalysisRunner的修改
-完成可视化工作
-核对验证找出来的warnings
+论文阅读以及代码分析  
+llvm的学习  
+ucore_plus的分析，修改部分makefile  
+完成llvm的build  
+完成SoundyAnalysisRunner的修改  
+完成可视化工作  
+核对验证找出来的warnings  
 
 ## 实验结果分析
 
