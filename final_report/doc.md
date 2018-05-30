@@ -187,3 +187,11 @@ Integer Overflow
 
 Loop is bounded by a tainted value  
 ![](https://github.com/oscourse-tsinghua/OS2018spring-projects-g12/blob/master/final_report/pictures/warning3.png)
+
+
+
+
+## 工作参考
+1. dr_checker的论文： https://www.usenix.org/system/files/conference/usenixsecurity17/sec17-machiry.pdf
+2. dr_checker的演示ppt： https://www.usenix.org/sites/default/files/conference/protected-files/usenixsecurity17_slides_spensky.pdf
+3. dr_chekcer的代码仓库： https://github.com/ucsb-seclab/dr_checker 
